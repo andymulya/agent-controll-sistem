@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T04:54:21+07:00",
-  "updatedAtLabel": "16 Nov 2026, 04:54 WIB",
+  "updatedAt": "2026-11-16T05:10:42+07:00",
+  "updatedAtLabel": "16 Nov 2026, 05:10 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -253,14 +253,14 @@
       "note": "PENDING test accounts: butuh 2 test account Meta (A attacker + B victim) + 2 test account Muse + connector test di B + test site/domain — dari Andy; baru probing via browser."
     },
     {
-      "name": "Next hunt — keputusan Andy",
-      "status": "pending",
-      "note": "PENDING Andy: (a) fee $5–$7 NEAR Intents SC / account-abstraction-bugs (Med berbayar tertinggi), (b) web gratis tapbit → synfutures → whitebit, (c) Meta live probing (butuh 2 test account)."
+      "name": "Discovery part 6 — gratis + ga butuh akun",
+      "status": "done",
+      "note": "DONE 16 Nov ~05:10: 12 kandidat lolos (gratis + tanpa akun target): E-Voting (YWH, Crit s/d €230k, cost 10 kredit), Kiteworks (Med €2.500–€3.000, Crit €50k), NVIDIA (Intigriti, Med $2.000 flat, tanpa akun), tapbit (Med $2.000 flat, langsung jalan), Adobe, YWH-sendiri, OVH, TeamViewer, Lightspark, Infomaniak, Tencent, Meta OSS llama3/llama-stack-ops. HackerOne TERBLOKIR tanpa akun; BugCrowd tetap 296, 0 baru; Sherlock 0 live (301 kontes semua finished)."
     },
     {
-      "name": "Discovery part 6 — gratis + ga butuh akun",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~04:54 at Andy's word: HackerOne + Intigriti (baru) + verifikasi Meta OSS 'belum tersentuh' vs log hunt #2/#3 + fase unauthenticated web survivors; kriteria: fee $0 + audit tanpa akun target; ranking EV Medium–Critical."
+      "name": "Next hunt — keputusan Andy (part 6)",
+      "status": "pending",
+      "note": "PENDING Andy: (a) tapbit web langsung (Med $2.000 flat, tanpa prasyarat), (b) buat akun YesWeHack + KYC → Kiteworks (Med €2.500–€3.000) / YWH-sendiri (cost 1) / E-Voting (Crit €230k, butuh 10 kredit), (c) buat akun Intigriti → NVIDIA (Med $2.000 flat) / Adobe / Lightspark, (d) Meta OSS llama3 (EV rendah)."
     }
   ]
 }
