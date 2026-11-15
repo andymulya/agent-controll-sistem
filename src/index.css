@@ -111,15 +111,12 @@ button{font-family:inherit;cursor:pointer}
 h1{font-size:32px;line-height:1.05;letter-spacing:-.03em;margin:0 0 10px;font-weight:800}
 h1 span{background:linear-gradient(90deg,#38bdf8,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* Astronot 3D melayang di header: mengambang (animasi) + miring 3D mengikuti mouse.
-   mix-blend-mode screen bikin latar gelap gambar menyatu dengan background navy. */
-.astronaut-scene{display:grid;place-items:center;margin:2px 0 6px;perspective:900px;position:relative}
+/* Astronot 3D interaktif: canvas Three.js, geser untuk memutar. */
+.astronaut-scene{display:grid;place-items:center;margin:2px 0 6px;position:relative}
 .astronaut-scene::before{content:'';position:absolute;width:280px;height:280px;background:radial-gradient(circle,rgba(56,189,248,.28),transparent 65%);filter:blur(10px);pointer-events:none}
-.astronaut-float{animation:astroFloat 6s ease-in-out infinite;will-change:transform;position:relative}
-.astronaut-tilt{transition:transform .25s ease;transform-style:preserve-3d;will-change:transform}
-.astronaut-img{width:min(230px,62vw);height:auto;display:block;-webkit-mask-image:radial-gradient(ellipse 75% 90% at 50% 50%,#000 55%,transparent 80%);mask-image:radial-gradient(ellipse 75% 90% at 50% 50%,#000 55%,transparent 80%)}
-@keyframes astroFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-14px) rotate(1.5deg)}}
-@media (prefers-reduced-motion:reduce){.astronaut-float{animation:none}}
+.astronaut-canvas{width:100%;height:300px;touch-action:pan-y;cursor:grab;position:relative}
+.astronaut-canvas:active{cursor:grabbing}
+.astronaut-canvas canvas{display:block;width:100% !important;height:100% !important}
 .lead{color:var(--muted);font-size:16px;line-height:1.6;margin:0;max-width:620px}
 .notice{
   margin-top:16px;

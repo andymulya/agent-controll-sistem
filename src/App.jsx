@@ -12,7 +12,7 @@ import {
   tabs,
   tiers,
 } from './data.js'
-import astronautImg from './assets/astronaut.js'
+import Astronaut3D from './components/Astronaut3D.jsx'
 
 const finePointer =
   typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
@@ -192,7 +192,6 @@ function matches(item, q) {
 export default function App() {
   const [tab, setTab] = useState('status')
   const [query, setQuery] = useState('')
-  const astroTilt = useTilt(10)
   const { toast, copyText } = useCopy()
   const controlsRef = useRef(null)
 
@@ -258,17 +257,8 @@ export default function App() {
             Kamu yang pegang keputusan. Kendall jadi manajernya, kerjaan rutin dilempar ke model gratis, yang
             berat tetap dipegang Kendall.
           </p>
-          <div className="astronaut-scene" aria-hidden="true">
-            <div className="astronaut-float">
-              <div
-                className="astronaut-tilt"
-                ref={astroTilt.ref}
-                onMouseMove={astroTilt.onMouseMove}
-                onMouseLeave={astroTilt.onMouseLeave}
-              >
-                <img className="astronaut-img" src={astronautImg} alt="" />
-              </div>
-            </div>
+          <div className="astronaut-scene">
+            <Astronaut3D />
           </div>
           <div className="notice">
             <div style={{ fontSize: 18 }}>ℹ️</div>
@@ -471,6 +461,8 @@ export default function App() {
           Control Center untuk Andy • Status per {STATUS_FOOTER}
           <br />
           Dashboard ini cuma pusat kontrol — tidak mengubah setting apa pun.
+          <br />
+          <a href="/api/auth/logout" style={{ color: '#7dd3fc' }}>Keluar</a>
         </footer>
       </div>
 
