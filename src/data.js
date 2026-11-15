@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 18:03 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 18:03 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 18:06 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 18:06 WIB'
 
 export const headerStats = [
   {
@@ -85,13 +85,13 @@ export const statusAgents = [
     name: 'Sorceress',
     role: 'Agen aset 3D • sorceress.games',
     badge: { text: 'AKTIF', kind: 'badge-active' },
-    text: 'Agen utama buat aset 3D game — Tripo v3.1, Meshy 7, auto-rig. Terhubung & teruji: 1 karakter cowok sudah jadi (45 kredit). Saldo tinggal 6 kredit — kalau habis, Kendall yang handle pakai jalur gratis.',
+    text: 'Agen utama buat aset 3D game — Tripo v3.1, Meshy 7, auto-rig. Terhubung & teruji: 1 karakter cowok sudah jadi (45 kredit). Saldo tinggal {CREDITS} kredit — kalau habis, Kendall yang handle pakai jalur gratis.',
   },
   {
     name: 'Xingchi API',
     role: 'Gateway AI • api.xingchiapi.com',
     badge: { text: 'AKTIF', kind: 'badge-active' },
-    text: 'Aktif & teruji lewat OpenCode: 2 model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Hanya klien coding yang diizinkan situsnya — script/SDK langsung ditolak, dan dsh tidak bisa karena jalurnya /v1/messages (ditolak grup key ini).',
+    text: 'Aktif & teruji lewat OpenCode: {MODELS_XINGCHI} model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Hanya klien coding yang diizinkan situsnya — script/SDK langsung ditolak, dan dsh tidak bisa karena jalurnya /v1/messages (ditolak grup key ini).',
   },
   {
     name: 'Iamhc',
@@ -103,7 +103,7 @@ export const statusAgents = [
     name: 'AgentRouter',
     role: 'Relay AI gratis • agentrouter.org',
     badge: { text: 'AKTIF', kind: 'badge-active' },
-    text: 'Aktif & teruji: 3 model (gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol), chat jalan lewat Responses API. Prompt harus bahasa Inggris — Indonesia diblokir.',
+    text: 'Aktif & teruji: {MODELS_AGENTROUTER} model (gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol), chat jalan lewat Responses API. Prompt harus bahasa Inggris — Indonesia diblokir.',
   },
   {
     name: 'OpenCode',
@@ -126,7 +126,7 @@ export const tiers = [
     price: true,
     title: 'DeepSeek V4 Pro via apinex',
     html: 'Status: <b style="color:#7dd3fc">AKTIF — teruji 1 call nyata</b> (probe reentrancy dijawab benar, biaya 0 token) • Konteks 1M token • 15 request / menit • OpenAI-compatible, bisa tool use. Ini model utama buat kerjaan, terutama bantu bug bounty.',
-    endpoint: 'Model: free/deepseek-v4-pro-0813 • apinex.bond',
+    endpoint: 'Model: free/deepseek-v4-pro-0813 • apinex.bond • {MODELS_APINEX} model terdaftar',
     link: 'https://apinex.bond/models/free-deepseek-v4-pro-0813',
     linkText: 'Lihat halaman model di apinex ↗',
     search: 'deepseek v4 pro apinex tier 0 gratis 1m konteks',
@@ -228,6 +228,7 @@ export const agents = [
     text: 'Otak sub-agent kedua — sudah terhubung, model auto teruji jawab probe reentrancy dengan benar. Dipakai buat kerjaan agen juga, tapi lambat (sekitar 30 detik per jawaban karena reasoning). Data sensitif Andy tidak pernah dikirim ke sini.',
     meta: [
       ['Model', 'auto (router)'],
+      ['Model terdaftar', '{MODELS_IAMHC}'],
       ['Uji nyata', 'Probe reentrancy ✓'],
       ['Kecepatan', '~30 detik / jawaban'],
       ['Aturan', 'Tanpa data sensitif'],
@@ -239,11 +240,11 @@ export const agents = [
     name: 'Sorceress',
     role: 'sorceress.games • Agen aset 3D',
     badge: { text: '● AKTIF', kind: 'badge-active' },
-    text: 'Agen utama buat aset game 3D — text/gambar jadi model GLB (Tripo v3.1, Meshy 7, Hunyuan), auto-rig + animasi. Sudah teruji: karakter petani cowok Harvest Valley jadi 1x (45 kredit). Saldo sekarang 6 kredit. Kalau kredit habis, Kendall yang handle pakai Blender (gratis).',
+    text: 'Agen utama buat aset game 3D — text/gambar jadi model GLB (Tripo v3.1, Meshy 7, Hunyuan), auto-rig + animasi. Sudah teruji: karakter petani cowok Harvest Valley jadi 1x (45 kredit). Saldo sekarang {CREDITS} kredit. Kalau kredit habis, Kendall yang handle pakai Blender (gratis).',
     meta: [
       ['Model', 'Tripo v3.1 (text-to-3D)'],
       ['Biaya', '45 kredit / generate HD'],
-      ['Saldo', '6 kredit'],
+      ['Saldo', '{CREDITS} kredit'],
       ['Rig', '20 kredit (auto-rig)'],
       ['Aturan', 'Kredit habis → Kendall handle'],
     ],
@@ -254,7 +255,7 @@ export const agents = [
     name: 'Xingchi API',
     role: 'api.xingchiapi.com • Gateway AI',
     badge: { text: '● AKTIF', kind: 'badge-active' },
-    text: 'Gateway AI OpenAI-compatible — aktif & teruji lewat OpenCode: 2 model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Batasan: chat langsung via script/SDK ditolak situsnya (403) — hanya klien coding yang diizinkan. Jalur dsh tidak bisa (dsh hanya bicara /v1/messages, ditolak grup key ini).',
+    text: 'Gateway AI OpenAI-compatible — aktif & teruji lewat OpenCode: {MODELS_XINGCHI} model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Batasan: chat langsung via script/SDK ditolak situsnya (403) — hanya klien coding yang diizinkan. Jalur dsh tidak bisa (dsh hanya bicara /v1/messages, ditolak grup key ini).',
     meta: [
       ['Model', 'gpt-6-astra, gpt-6.1-sol'],
       ['Uji nyata', 'OpenCode ✓ • chat dijawab benar'],
@@ -268,7 +269,7 @@ export const agents = [
     name: 'AgentRouter',
     role: 'agentrouter.org • Relay AI gratis',
     badge: { text: '● AKTIF', kind: 'badge-active' },
-    text: 'Relay AI gratis (non-profit) buat coding tools — terhubung & teruji: 3 model (gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol), chat jalan lewat Responses API. Daftar pakai GitHub/LinuxDO, kredit gratis. Catatan: prompt harus bahasa Inggris (bukan Indonesia), model bisa datang-pergi.',
+    text: 'Relay AI gratis (non-profit) buat coding tools — terhubung & teruji: {MODELS_AGENTROUTER} model (gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol), chat jalan lewat Responses API. Daftar pakai GitHub/LinuxDO, kredit gratis. Catatan: prompt harus bahasa Inggris (bukan Indonesia), model bisa datang-pergi.',
     meta: [
       ['Model', 'gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol'],
       ['Uji nyata', 'Responses ✓ (2+2 dijawab benar)'],

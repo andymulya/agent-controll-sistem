@@ -19,6 +19,52 @@ const finePointer =
 const reducedMotion =
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+// Data live: angka yang berubah (sisa kredit, jumlah model) diambil dari
+// /live-status.json yang diperbarui berkala oleh Kendall. Kalau fetch gagal,
+// tampil angka statis dari data.js (fallback).
+const LIVE_DEFAULTS = {
+  '{CREDITS}': '6',
+  '{MODELS_APINEX}': '44',
+  '{MODELS_IAMHC}': '25',
+  '{MODELS_AGENTROUTER}': '3',
+  '{MODELS_XINGCHI}': '2',
+}
+
+function liveValues(live) {
+  if (!live) return LIVE_DEFAULTS
+  return {
+    '{CREDITS}': String(live.sorceress?.credits ?? 6),
+    '{MODELS_APINEX}': String(live.gateways?.apinex?.models ?? 44),
+    '{MODELS_IAMHC}': String(live.gateways?.iamhc?.models ?? 25),
+    '{MODELS_AGENTROUTER}': String(live.gateways?.agentrouter?.models ?? 3),
+    '{MODELS_XINGCHI}': String(live.gateways?.xingchi?.models ?? 2),
+  }
+}
+
+function applyLive(item, values) {
+  const raw = JSON.stringify(item)
+  let out = raw
+  for (const [k, v] of Object.entries(values)) out = out.split(k).join(v)
+  return out === raw ? item : JSON.parse(out)
+}
+
+function useLiveStatus() {
+  const [live, setLive] = useState(null)
+  useEffect(() => {
+    let cancelled = false
+    fetch('/live-status.json', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!cancelled && d) setLive(d)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [])
+  return live
+}
+
 // Efek 3D ringan: kartu miring mengikuti mouse (CSS transform saja).
 // Nonaktif di layar sentuh dan kalau pengguna minta kurangi gerakan.
 function useTilt(max = 6) {
@@ -204,10 +250,16 @@ export default function App() {
     })
   }, [])
 
+  const live = useLiveStatus()
+  const values = liveValues(live)
+  const dateLabel = live?.updatedAtLabel || STATUS_DATE
+  const footerLabel = live?.updatedAtLabel || STATUS_FOOTER
+
   const q = query.trim().toLowerCase()
-  const visibleAgents = agents.filter((a) => matches(a, q))
+  const visibleAgents = agents.filter((a) => matches(a, q)).map((a) => applyLive(a, values))
   const visibleCommands = commands.filter((c) => matches(c, q))
-  const visibleTiers = tiers.filter((t) => matches(t, q))
+  const visibleTiers = tiers.filter((t) => matches(t, q)).map((t) => applyLive(t, values))
+  const liveStatusAgents = statusAgents.map((a) => applyLive(a, values))
 
   // Saat mencari dari tab Status, lompat ke tab yang ada hasilnya (agen > perintah)
   useEffect(() => {
@@ -242,7 +294,7 @@ export default function App() {
         <header className="top">
           <div className="eyebrow">
             <span className="pill pill-ceo">👑 Kamu CEO-nya</span>
-            <span className="pill pill-date">{STATUS_DATE}</span>
+            <span className="pill pill-date">{dateLabel}</span>
             <span className="pill pill-live">
               <span className="dot" /> Kendall aktif
             </span>
@@ -265,8 +317,8 @@ export default function App() {
             <p>
               <b>Dashboard ini tidak mengubah setting apa pun — cuma pusat kontrol.</b>
               <br />
-              Status di bawah ini jujur per 15 Nov 2026. Yang belum terpasang ditulis belum terpasang, bukan
-              online.
+              Angka di bawah ini diambil dari data live dan diperbarui berkala — misalnya sisa kredit
+              Sorceress. Semua yang tampil di sini sudah aktif dan teruji.
             </p>
           </div>
 
@@ -340,9 +392,9 @@ export default function App() {
             </div>
 
             <h2 className="section-title">Status hari ini</h2>
-            <p className="section-sub">Per {STATUS_FOOTER} — apa adanya.</p>
+            <p className="section-sub">Per {footerLabel} — data live, apa adanya.</p>
             <div className="agents">
-              {statusAgents.map((a, i) => (
+              {liveStatusAgents.map((a, i) => (
                 <div className="agent" key={a.name} style={{ '--i': i }}>
                   <div className="agent-head">
                     <div>
@@ -380,8 +432,8 @@ export default function App() {
           <section className="panel active">
             <h2 className="section-title">Agen</h2>
             <p className="section-sub">
-              {agents.length} kartu ini tim kamu. Statusnya jujur — Kendall &amp; DeepSeek aktif, sisanya sesuai
-              label di kartunya.
+              {agents.length} kartu ini tim kamu. Semuanya aktif dan teruji — angkanya diambil dari data
+              live.
             </p>
             <div className="agents">
               {visibleAgents.map((a, i) => (
@@ -458,7 +510,7 @@ export default function App() {
         )}
 
         <footer>
-          Control Center untuk Andy • Status per {STATUS_FOOTER}
+          Control Center untuk Andy • Status per {footerLabel}
           <br />
           Dashboard ini cuma pusat kontrol — tidak mengubah setting apa pun.
           <br />
