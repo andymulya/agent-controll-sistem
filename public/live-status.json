@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T04:01:24+07:00",
-  "updatedAtLabel": "16 Nov 2026, 04:01 WIB",
+  "updatedAt": "2026-11-16T04:10:19+07:00",
+  "updatedAtLabel": "16 Nov 2026, 04:10 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -244,8 +244,13 @@
     },
     {
       "name": "Hunt Meta AI / Muse live surface (tahap 1)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~04:00 at Andy's word: scope + reward tiers verified live, dedup, test plan with Andy's own test accounts only; no filing, no account creation; live probing via browser after plan lands."
+      "status": "done",
+      "note": "DONE 16 Nov ~04:10 (tahap 1): scope 10 produk + 17 kategori payout verified live (Muse s/d $300k, Meta AI private content $130k, smuggling sendiri $5k); top vectors V-02 BOLA/IDOR $130k, V-01 Muse cross-user $130k, V-05 smuggling+outcome $130k; log hunt-log-META-AI-2026-11-16.md."
+    },
+    {
+      "name": "Meta live probing (V-02/V-01/V-05)",
+      "status": "pending",
+      "note": "PENDING test accounts: butuh 2 test account Meta (A attacker + B victim) + 2 test account Muse + connector test di B + test site/domain — dari Andy; baru probing via browser."
     }
   ]
 }
