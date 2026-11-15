@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:42:08+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:42 WIB",
+  "updatedAt": "2026-11-16T00:43:58+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:43 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -165,8 +165,9 @@
     },
     {
       "name": "Hunt Cronos zkEVM (full free)",
-      "status": "running",
-      "detail": "HackenProof • $500–$50.000 • tanpa gate reputasi • gratis • Solidity • 6 kontrak ter-deploy"
+      "status": "done",
+      "detail": "HackenProof • $500–$50.000 • tanpa gate reputasi • gratis • Solidity • 6 kontrak ter-deploy",
+      "note": "NO-FIND (done 16 Nov ~00:43). 94 targets audited (Amply/Aave V3, Fulcrom/GMX, H2, Veno); 30 candidates killed. Caveats: 2nd pass failed (Xingchi outage), Amply live Pool impl rev 2 unverified, Foundry fork PoCs don't work on zkEVM."
     },
     {
       "name": "Hunt SG Forge (full free)",
