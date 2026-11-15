@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T20:52:15+07:00",
-  "updatedAtLabel": "15 Nov 2026, 20:52 WIB",
+  "updatedAt": "2026-11-15T20:59:04+07:00",
+  "updatedAtLabel": "15 Nov 2026, 20:59 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -94,16 +94,23 @@
     },
     {
       "name": "Hunt Layer3 (full free)",
-      "detail": "HackenProof • $500.000 • Solidity dapp • gratis submit, KYC saat payout • verifikasi open/free dulu • pola P-06/P-17/P-01",
+      "detail": "HackenProof • $500.000 • NO-FIND (12 kandidat gugur; Factory+Escrow direkonstruksi via disassembly; PoC negatif 6/6)",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:29 WIB",
-      "status": "running"
+      "status": "done"
     },
     {
       "name": "Hunt Sumer (full free)",
       "detail": "BugRap id 37 • $5.000 • Solidity cross-chain synthetic + lending • gratis submit • hunt berjalan paralel dengan Layer3",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:52 WIB",
+      "status": "running"
+    },
+    {
+      "name": "Hunt Snowbridge (full free)",
+      "detail": "HackenProof • s.d. $75.000 • bridge Polkadot-Ethereum • terbukti bayar $35.100 • PoC dua sisi, bar tinggi • pola P-12",
+      "owner": "Agen Bug (DeepSeek)",
+      "startedAt": "15 Nov 2026, 20:59 WIB",
       "status": "running"
     }
   ]
