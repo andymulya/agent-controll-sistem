@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:35:59+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:35 WIB",
+  "updatedAt": "2026-11-16T00:38:30+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:38 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -198,7 +198,7 @@
       "name": "Hunt Meta #2 — open source (full free)",
       "status": "done",
       "detail": "bugbounty.meta.com • FINDING M-02 (Medium) TERVERIFIKASI: prompt-ops backend — traversal baca/tulis file + /api/settings bocor key penuh • PoC 5/7 PASS • dedup bersih • BELUM difile, nunggu Ya kirim Andy",
-      "note": "FINDING M-02 Medium verified. FILING FAILED 16 Nov ~00:26: Meta site error 'Something went wrong' on 3 submit attempts (form + 2 attachments were complete; session still active, no Facebook login needed). NO report created, no duplicate risk. Filled form still open in browser tab for retry after Andy unlocks his Meta account / after a pause. Andy said 'Wait'."
+      "note": "FINDING M-02 Medium FILED 16 Nov ~00:38: report #4667751256773396, status New, GRATIS (first 3 submit attempts failed on Meta site error; retry at Andy's word succeeded). Profile now lists 2 reports (M-02 + M-01)."
     },
     {
       "name": "Hunt Polkadot Bridge (full free)",
