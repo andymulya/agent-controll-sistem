@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:22:52+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:22 WIB",
+  "updatedAt": "2026-11-15T23:26:59+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:26 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -13,8 +13,8 @@
       "models": 44
     },
     "iamhc": {
-      "status": "unknown",
-      "models": null
+      "status": "active",
+      "models": 25
     },
     "agentrouter": {
       "status": "active",
@@ -172,6 +172,11 @@
       "name": "Hunt SG Forge (full free)",
       "status": "running",
       "detail": "HackenProof • $200–$10.000 • tanpa gate reputasi • gratis • tanpa KYC • stablecoin EURCV/USDCV"
+    },
+    {
+      "name": "Hunt Meta Bug Bounty (full free)",
+      "status": "running",
+      "detail": "bugbounty.meta.com • min $500, max $300k • gratis • scope: Facebook/IG/WA/Muse/Meta AI/Open source • baca aturan testing dulu"
     }
   ]
 }
