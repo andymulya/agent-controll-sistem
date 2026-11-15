@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 17:35 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 17:35 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 17:57 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 17:57 WIB'
 
 export const headerStats = [
   {
@@ -41,7 +41,7 @@ export const howtoSteps = [
   {
     num: 2,
     title: 'Baca cara pakainya',
-    text: 'Di tiap kartu ada peran & batasnya. Yang tulisannya “belum dipasang” berarti belum bisa dipakai.',
+    text: 'Di tiap kartu ada peran & batasnya. Semua yang tampil di sini sudah aktif dan bisa dipakai.',
   },
   {
     num: 3,
@@ -63,8 +63,8 @@ export const routeRows = [
   },
   {
     icon: '🔁',
-    title: 'Kalau gratisan mentok → baru eskalasi',
-    text: 'Naik tier berurutan: Tier 0 dulu, baru Gemini (Tier 1), baru Nemotron (Tier 2). Berbayar: tidak ada.',
+    title: 'Kalau gratisan mentok → Kendall yang eskalasi',
+    text: 'Tier 0 dulu buat semua kerjaan. Kalau lagi penuh atau mentok, Kendall yang cari jalan lain. Berbayar: tidak ada.',
   },
 ]
 
@@ -86,18 +86,6 @@ export const statusAgents = [
     role: 'Agen aset 3D • sorceress.games',
     badge: { text: 'AKTIF', kind: 'badge-active' },
     text: 'Agen utama buat aset 3D game — Tripo v3.1, Meshy 7, auto-rig. Terhubung & teruji: 1 karakter cowok sudah jadi (45 kredit). Saldo tinggal 6 kredit — kalau habis, Kendall yang handle pakai jalur gratis.',
-  },
-  {
-    name: 'Xingchi API',
-    role: 'Gateway AI • api.xingchiapi.com',
-    badge: { text: 'TERHUBUNG', kind: 'badge-via' },
-    text: 'Terhubung & teruji: 2 model terdaftar (gpt-6-astra, gpt-6.1-sol). Chat langsung via script ditolak — hanya klien coding (dsh) yang diizinkan; jalur dsh sedang dites.',
-  },
-  {
-    name: 'DSH, REA, Gemini CLI',
-    role: 'Pendukung',
-    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
-    text: 'Ketiganya hilang kena ganti VM (npm global ikut kehapus) — belum di-install ulang. DSH sempat terpasang 15 Nov 16:29 tapi ikut hilang. Gemini tetap butuh login Google Andy sendiri setelah dipasang.',
   },
   {
     name: 'Kantor AI',
@@ -140,30 +128,6 @@ export const tiers = [
     endpoint: 'https://text.pollinations.ai/',
     link: null,
     search: 'pollinations text gratis tanpa key tanpa kuota one-shot',
-    amber: false,
-  },
-  {
-    tag: 'TIER 1 — FALLBACK',
-    tagAlt: true,
-    price: false,
-    title: 'Gemini — Google Gemini CLI',
-    html: 'CLI v0.68.0 sudah terpasang, tapi belum login — butuh login Google Andy sendiri. Habis login: free tier dari Google, dipakai sebagai fallback kalau Tier 0 lagi penuh, plus second opinion / cek silang jawaban.',
-    endpoint: null,
-    link: null,
-    badge: { text: 'BELUM LOGIN', kind: 'badge-wait' },
-    search: 'gemini google free tier fallback second opinion tier 1',
-    amber: false,
-  },
-  {
-    tag: 'TIER 2 — CADANGAN BESAR',
-    tagAlt: true,
-    price: false,
-    title: 'NVIDIA Nemotron 3 Ultra',
-    html: 'Gratis via NVIDIA NIM • 40 RPM. Butuh API key NVIDIA — belum dipasang. Cadangan kalau butuh model besar lain.',
-    endpoint: 'https://integrate.api.nvidia.com/v1',
-    link: null,
-    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
-    search: 'nvidia nemotron 3 ultra nim gratis 40 rpm tier 2',
     amber: false,
   },
 ]
@@ -229,20 +193,6 @@ export const agents = [
     search: 'sorceress aset 3d tripo meshy rig game harvest valley',
   },
   {
-    name: 'Xingchi API',
-    role: 'api.xingchiapi.com • Gateway AI',
-    badge: { text: 'TERHUBUNG', kind: 'badge-via' },
-    text: 'Gateway AI OpenAI-compatible — terhubung & teruji: daftar model keluar (gpt-6-astra, gpt-6.1-sol). Batasan: chat langsung via script/SDK ditolak situsnya (403) — hanya klien coding yang diizinkan (Codex, Claude Code, DeepSeek Harness, dll). Jalur pakai dsh sedang dites.',
-    meta: [
-      ['Model', 'gpt-6-astra, gpt-6.1-sol'],
-      ['Uji nyata', 'List model ✓ • chat script 403'],
-      ['Jalur', 'Hanya klien coding (dsh)'],
-      ['Aturan', 'Tanpa data sensitif'],
-    ],
-    actions: [{ type: 'copy', text: 'Cek status Xingchiapi', label: 'Salin: Cek status Xingchi', primary: false }],
-    search: 'xingchiapi gateway ai gpt-6 astra sol terhubung dsh coding client',
-  },
-  {
     name: 'AgentRouter',
     role: 'agentrouter.org • Relay AI gratis',
     badge: { text: '● AKTIF', kind: 'badge-active' },
@@ -258,45 +208,6 @@ export const agents = [
       { type: 'link', href: 'https://agentrouter.org', label: 'Buka agentrouter.org ↗' },
     ],
     search: 'agentrouter relay ai gratis claude opus gpt-6 astra deepseek v4 github linuxdo',
-  },
-  {
-    name: 'Gemini',
-    role: 'Google Gemini CLI • Free tier',
-    badge: { text: 'BELUM LOGIN', kind: 'badge-wait' },
-    text: 'CLI-nya belum terpasang — hilang kena ganti VM (npm global ikut kehapus). Setelah dipasang, loginnya harus pakai akun Google Andy sendiri. Habis login, jadi fallback + second opinion: kalau DeepSeek lagi limit atau Kendall butuh pembanding jawaban, Gemini yang cek silang.',
-    meta: [
-      ['Versi', '0.68.0 (belum terpasang)'],
-      ['Status', 'Belum terpasang + belum login'],
-      ['Rencana', 'Fallback Tier 1'],
-    ],
-    actions: [{ type: 'copy', text: 'Login Gemini pakai akun Google-ku', label: 'Salin: Login Gemini', primary: false }],
-    search: 'gemini google cli 0.68.0 terpasang belum login fallback second opinion',
-  },
-  {
-    name: 'DSH',
-    role: 'DeepSeek Harness • Open source',
-    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
-    text: 'Runtime agen gratis buat jalanin kerja rutin secara mandiri — sempat terpasang (v0.2.2-rc.1) tapi hilang kena ganti VM. Catatan: request DSH ke Apinex sempat 403, jadi Agen Bug tetap jalan lewat helper apinex.py, bukan DSH.',
-    meta: [
-      ['Jenis', 'Runtime agen open source'],
-      ['Versi', '0.2.2-rc.1'],
-      ['Status', 'Belum terpasang ulang'],
-    ],
-    actions: [{ type: 'copy', text: 'Cek status DSH', label: 'Salin: Cek status DSH', primary: false }],
-    search: 'dsh deepseek harness open source runtime agen gratis terpasang 0.2.2',
-  },
-  {
-    name: 'REA',
-    role: 'Reverse Engineer Anything • MCP',
-    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
-    text: 'Spesialis bedah kode & kontrak — sempat terpasang (v6.9.0) tapi hilang kena ganti VM, belum di-install ulang. Kalau sudah dipasang lagi, bantu audit kontrak / reverse engineering buat keperluan bounty hunting.',
-    meta: [
-      ['Fokus', 'Audit & reverse engineering'],
-      ['Versi', '6.9.0'],
-      ['Status', 'Belum terpasang ulang'],
-    ],
-    actions: [{ type: 'copy', text: 'Pakai REA buat audit kontrak', label: 'Salin: Pakai REA', primary: false }],
-    search: 'rea reverse engineer anything mcp audit kontrak bounty terpasang 6.9.0',
   },
   {
     name: 'Kantor AI',
@@ -333,6 +244,5 @@ export const tabs = [
 export const bottomNav = [
   { nav: 'agen', icon: '🤖', label: 'Agen' },
   { nav: 'llm', icon: '⚡', label: 'DeepSeek' },
-  { nav: 'llm', icon: '✦', label: 'Gemini' },
   { nav: 'perintah', icon: '🔑', label: 'API Key' },
 ]
