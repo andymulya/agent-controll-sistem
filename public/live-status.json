@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T21:34:53+07:00",
-  "updatedAtLabel": "15 Nov 2026, 21:34 WIB",
+  "updatedAt": "2026-11-15T21:47:06+07:00",
+  "updatedAtLabel": "15 Nov 2026, 21:47 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -120,8 +120,13 @@
     },
     {
       "name": "Hunt InitVerse (full free)",
+      "status": "done",
+      "detail": "BugRap id 123 • $20.000 • FINDING C-01 Critical (seal check PoW di-comment di v1.0.4, snap-sync terima rantai palsu) — verifikasi independen Kendall: PoC 2 bagian re-run PASS + bisect v1.0.3 vs v1.0.4 terkonfirmasi + live chainId 7233 — menunggu \"Ya kirim\" Andy"
+    },
+    {
+      "name": "Hunt Bifrost (full free)",
       "status": "running",
-      "detail": "BugRap • $20.000 • INIChain TfhEVM/FHE • gratis submit • pola P-11/P-12"
+      "detail": "BugRap • $20.000 • Substrate/Rust • gratis submit"
     }
   ]
 }
