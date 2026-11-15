@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 14:35 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 14:35 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 17:12 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 17:12 WIB'
 
 export const headerStats = [
   {
@@ -80,6 +80,12 @@ export const statusAgents = [
     role: 'Otak sub-agent • apinex.bond',
     badge: { text: 'AKTIF', kind: 'badge-active' },
     text: 'Sudah aktif & teruji: 1 call nyata dijawab benar (probe reentrancy), biaya 0 token. Model utama buat kerjaan, terutama bantu bug bounty.',
+  },
+  {
+    name: 'Sorceress',
+    role: 'Agen aset 3D • sorceress.games',
+    badge: { text: 'AKTIF', kind: 'badge-active' },
+    text: 'Agen utama buat aset 3D game — Tripo v3.1, Meshy 7, auto-rig. Terhubung & teruji: 1 karakter cowok sudah jadi (45 kredit). Saldo tinggal 6 kredit — kalau habis, Kendall yang handle pakai jalur gratis.',
   },
   {
     name: 'DSH, REA, Gemini CLI',
@@ -200,6 +206,21 @@ export const agents = [
     ],
     actions: [{ type: 'copy', text: 'Cek status Iamhc', label: 'Salin: Cek status Iamhc', primary: false }],
     search: 'iamhc auto sub-agent aktif terhubung router reasoning lambat',
+  },
+  {
+    name: 'Sorceress',
+    role: 'sorceress.games • Agen aset 3D',
+    badge: { text: '● AKTIF', kind: 'badge-active' },
+    text: 'Agen utama buat aset game 3D — text/gambar jadi model GLB (Tripo v3.1, Meshy 7, Hunyuan), auto-rig + animasi. Sudah teruji: karakter petani cowok Harvest Valley jadi 1x (45 kredit). Saldo sekarang 6 kredit. Kalau kredit habis, Kendall yang handle pakai Blender (gratis).',
+    meta: [
+      ['Model', 'Tripo v3.1 (text-to-3D)'],
+      ['Biaya', '45 kredit / generate HD'],
+      ['Saldo', '6 kredit'],
+      ['Rig', '20 kredit (auto-rig)'],
+      ['Aturan', 'Kredit habis → Kendall handle'],
+    ],
+    actions: [{ type: 'copy', text: 'Buatkan aset 3D buat Harvest Valley', label: 'Salin: Minta aset 3D', primary: false }],
+    search: 'sorceress aset 3d tripo meshy rig game harvest valley',
   },
   {
     name: 'Gemini',
