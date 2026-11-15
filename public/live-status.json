@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T20:02:04+07:00",
-  "updatedAtLabel": "15 Nov 2026, 20:02 WIB",
+  "updatedAt": "2026-11-15T20:20:01+07:00",
+  "updatedAtLabel": "15 Nov 2026, 20:20 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -69,6 +69,13 @@
       "detail": "BugRap id 31 • $10.000 • Arcana + Bridge (BNBChain/Linea/Manta/Polygon) • GRATIS submit • hunt berjalan paralel dengan Kiln",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:02 WIB",
+      "status": "running"
+    },
+    {
+      "name": "Cari program bounty baru",
+      "detail": "Agen Bug cari program BugRap + Cantina baru (GRATIS submit, live, belum dihunt) — daftar kandidat baru",
+      "owner": "Agen Bug (DeepSeek)",
+      "startedAt": "15 Nov 2026, 20:19 WIB",
       "status": "running"
     }
   ]
