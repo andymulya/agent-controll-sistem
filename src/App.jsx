@@ -53,6 +53,9 @@ function useLiveStatus() {
   useEffect(() => {
     let cancelled = false
     const load = () => {
+      // Jangan fetch saat tab disembunyikan (HP dikunci / pindah aplikasi):
+      // datanya tetap diambil lagi begitu tab terlihat (lihat onVisible).
+      if (document.hidden) return
       fetch('/live-status.json', { cache: 'no-store' })
         .then((r) => (r.ok ? r.json() : null))
         .then((d) => {
@@ -66,13 +69,18 @@ function useLiveStatus() {
         })
         .catch(() => {})
     }
+    const onVisible = () => {
+      if (!document.hidden) load()
+    }
     load()
     // Poll the live file: every new push (task started/finished, credits
     // changed) reaches the screen by setState, no browser refresh needed.
     const timer = setInterval(load, 30000)
+    document.addEventListener('visibilitychange', onVisible)
     return () => {
       cancelled = true
       clearInterval(timer)
+      document.removeEventListener('visibilitychange', onVisible)
     }
   }, [])
   return live

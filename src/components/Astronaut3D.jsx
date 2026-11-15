@@ -52,7 +52,9 @@ export default function Astronaut3D() {
     camera.lookAt(0, 0.95, 0)
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
+    // Pixel ratio dibatasi 1,5: di HP layar DPR 2-3, render 2x lipat piksel
+    // bikin GPU panas + throttle — 1,5 sudah tajam untuk voxel ini.
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5))
     renderer.setClearColor(0x000000, 0)
     mount.appendChild(renderer.domElement)
 
@@ -163,10 +165,17 @@ export default function Astronaut3D() {
     mount.addEventListener('pointercancel', onUp)
 
     // --- Animasi ---
+    // DULU: requestAnimationFrame jalan 60fps TANPA HENTI — render 1.435 kubus
+    // terus-menerus walau tab disembunyikan / canvas keluar layar / HP dikunci.
+    // Itu yang bikin HP panas, throttle, lalu freeze/stuck kalau web dibuka lama.
+    // SEKARANG: loop dijeda saat tidak terlihat, dan cukup ~30fps saat terlihat.
     let raf = 0
+    let running = false
+    let lastFrame = 0
+    let visible = true
     const clock = new THREE.Clock()
-    function tick() {
-      raf = requestAnimationFrame(tick)
+
+    function renderFrame() {
       const t = clock.getElapsedTime()
       if (!reducedMotion) {
         // Melayang naik-turun + goyang halus
@@ -194,9 +203,51 @@ export default function Astronaut3D() {
       }
       renderer.render(scene, camera)
     }
-    tick()
+
+    function tick(now) {
+      if (!running) return
+      raf = requestAnimationFrame(tick)
+      // Batasi ~30fps: animasi melayang tetap halus, kerja GPU separuh.
+      if (now - lastFrame < 33) return
+      lastFrame = now
+      renderFrame()
+    }
+
+    function start() {
+      if (running || reducedMotion) return
+      running = true
+      lastFrame = 0
+      raf = requestAnimationFrame(tick)
+    }
+
+    function stop() {
+      running = false
+      cancelAnimationFrame(raf)
+    }
+
+    // Jeda saat tab/app disembunyikan (HP dikunci / pindah aplikasi).
+    function onVisibility() {
+      if (document.hidden) stop()
+      else if (visible) start()
+    }
+    document.addEventListener('visibilitychange', onVisibility)
+
+    // Jeda saat canvas keluar layar (pindah tab bawah / scroll lewat).
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting
+      if (visible && !document.hidden) start()
+      else stop()
+    })
+    io.observe(mount)
+
+    // Reduced motion: satu frame statis saja, tanpa loop sama sekali.
+    if (reducedMotion) renderFrame()
+    else start()
 
     return () => {
+      stop()
+      io.disconnect()
+      document.removeEventListener('visibilitychange', onVisibility)
       cancelAnimationFrame(raf)
       ro.disconnect()
       mount.removeEventListener('pointerdown', onDown)
