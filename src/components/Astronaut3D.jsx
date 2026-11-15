@@ -1,96 +1,38 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { GRID_W, GRID_H, PIXELS } from '../assets/pixel-astronaut.js'
 
-// Astronot PIXEL / voxel: dirakit dari kubus-kubus (ala Minecraft),
-// bukan gambar dan bukan model halus — gaya pixel yang keren.
-// Putih + visor biru + aksen oranye, bisa diputar pakai jari/mouse.
-const V = 0.15 // ukuran 1 voxel
-
-function buildVoxelAstronaut() {
-  const suit = new THREE.MeshStandardMaterial({ color: 0xeef2f7, roughness: 0.6, metalness: 0.02 })
-  const gray = new THREE.MeshStandardMaterial({ color: 0xb9c4d4, roughness: 0.6, metalness: 0.05 })
-  const gloveMat = new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.6, metalness: 0.05 })
-  const dark = new THREE.MeshStandardMaterial({ color: 0x2b3a55, roughness: 0.5, metalness: 0.1 })
-  const visorMat = new THREE.MeshStandardMaterial({
-    color: 0x0b1e3a,
-    roughness: 0.2,
-    metalness: 0.4,
-    emissive: 0x1d4ed8,
-    emissiveIntensity: 0.5,
+// Astronot PIXEL 3D: gambar pixel-art asli diubah jadi relief voxel —
+// tiap pixel gambar = 1 kubus kecil berwarna sama, 2 kubus tebalnya.
+// Jadi kelihatan pixel art beneran, tapi punya kedalaman 3D dan bisa diputar.
+// (Sumber gambar: AI pixel-art 16-bit, latar hitam dihapus via flood fill.)
+function buildPixelRelief() {
+  const geo = new THREE.BoxGeometry(1, 1, 2)
+  const mat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.65, metalness: 0.05 })
+  const mesh = new THREE.InstancedMesh(geo, mat, PIXELS.length)
+  const dummy = new THREE.Object3D()
+  const color = new THREE.Color()
+  PIXELS.forEach(([x, y, r, g, b], i) => {
+    // y gambar = dari atas; y three.js = dari bawah -> dibalik.
+    dummy.position.set(x - GRID_W / 2 + 0.5, GRID_H - 1 - y - GRID_H / 2 + 0.5, 0)
+    dummy.updateMatrix()
+    mesh.setMatrixAt(i, dummy.matrix)
+    color.setRGB(r / 255, g / 255, b / 255)
+    mesh.setColorAt(i, color)
   })
-  const orange = new THREE.MeshStandardMaterial({ color: 0xf97316, roughness: 0.55, metalness: 0.02 })
-  const lightBlue = new THREE.MeshStandardMaterial({
-    color: 0x7dd3fc,
-    roughness: 0.3,
-    metalness: 0.1,
-    emissive: 0x38bdf8,
-    emissiveIntensity: 0.9,
-  })
-  const redLight = new THREE.MeshStandardMaterial({
-    color: 0xef4444,
-    roughness: 0.3,
-    metalness: 0.1,
-    emissive: 0xef4444,
-    emissiveIntensity: 0.9,
-  })
-  const blueLight = new THREE.MeshStandardMaterial({
-    color: 0x38bdf8,
-    roughness: 0.3,
-    metalness: 0.1,
-    emissive: 0x38bdf8,
-    emissiveIntensity: 0.9,
-  })
+  mesh.instanceMatrix.needsUpdate = true
+  if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true
 
-  const astro = new THREE.Group()
-  // box(w,h,d, cx,cy,cz, mat) — ukuran & posisi dalam satuan voxel
-  function box(w, h, d, x, y, z, mat) {
-    const m = new THREE.Mesh(new THREE.BoxGeometry(w * V, h * V, d * V), mat)
-    m.position.set(x * V, y * V, z * V)
-    astro.add(m)
-    return m
-  }
-
-  // Sepatu + ujung oranye
-  box(2, 1, 3, -1.5, 0.5, 0.5, gray)
-  box(2, 1, 3, 1.5, 0.5, 0.5, gray)
-  box(2, 0.5, 0.3, -1.5, 0.75, 2.05, orange)
-  box(2, 0.5, 0.3, 1.5, 0.75, 2.05, orange)
-  // Kaki
-  box(2, 4, 2, -1.5, 3, 0, suit)
-  box(2, 4, 2, 1.5, 3, 0, suit)
-  // Badan + sabuk + panel dada
-  box(5, 5, 3, 0, 7.5, 0, suit)
-  box(5, 1, 3.2, 0, 5.5, 0, gray)
-  box(3, 2, 0.4, 0, 8.5, 1.6, dark)
-  box(1, 1, 0.2, -0.7, 9, 1.85, blueLight)
-  box(1, 1, 0.2, 0.7, 8.2, 1.85, redLight)
-  box(5, 0.6, 0.2, 0, 9.6, 1.55, orange)
-  // Lengan + garis bahu oranye + sarung tangan
-  box(2, 5, 2, -3.5, 7.5, 0, suit)
-  box(2, 5, 2, 3.5, 7.5, 0, suit)
-  box(2, 1, 2.1, -3.5, 9.5, 0, orange)
-  box(2, 1, 2.1, 3.5, 9.5, 0, orange)
-  box(2, 2, 2, -3.5, 4, 0, gloveMat)
-  box(2, 2, 2, 3.5, 4, 0, gloveMat)
-  // Patch merah di lengan kiri
-  box(0.2, 1, 1, -4.6, 8.5, 0.5, redLight)
-  // Leher
-  box(3, 1, 3, 0, 10.5, 0, gray)
-  // Helm + visor + kilau
-  box(5, 4, 5, 0, 12.5, 0, suit)
-  box(3, 2, 0.6, 0, 12.5, 2.6, visorMat)
-  box(2, 0.6, 0.2, -0.3, 13.2, 2.95, lightBlue)
-  // Antena + ujung menyala
-  box(1, 2, 1, 2, 15.5, -1, gray)
-  box(1, 1, 1, 2, 17, -1, blueLight)
-  // Ransel + tabung + katup
-  box(4, 4, 2, 0, 8, -2.5, gray)
-  box(1, 2, 1, -1.5, 11, -2.5, suit)
-  box(1, 2, 1, 1.5, 11, -2.5, suit)
-  box(1, 1, 0.4, 0, 9, -3.6, redLight)
-
-  astro.position.y = -0.3
-  return astro
+  // Pusatkan + skala supaya tinggi 2,4 dan tengahnya di y=0,95.
+  const group = new THREE.Group()
+  group.add(mesh)
+  const box = new THREE.Box3().setFromObject(group)
+  const size = box.getSize(new THREE.Vector3())
+  if (size.y > 0) group.scale.setScalar(2.4 / size.y)
+  const box2 = new THREE.Box3().setFromObject(group)
+  const c2 = box2.getCenter(new THREE.Vector3())
+  group.position.set(-c2.x, 0.95 - c2.y, -c2.z)
+  return group
 }
 
 export default function Astronaut3D() {
@@ -129,7 +71,7 @@ export default function Astronaut3D() {
     // Rig: yang diputar + dilayangkan.
     const rig = new THREE.Group()
     scene.add(rig)
-    rig.add(buildVoxelAstronaut())
+    rig.add(buildPixelRelief())
 
     // Bintang-bintang di sekitar
     const starCount = 160
