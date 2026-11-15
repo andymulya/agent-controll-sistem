@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T01:02:25+07:00",
-  "updatedAtLabel": "16 Nov 2026, 01:02 WIB",
+  "updatedAt": "2026-11-16T03:24:57+07:00",
+  "updatedAtLabel": "16 Nov 2026, 03:24 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -226,6 +226,16 @@
       "name": "Hunt Meta #3 — open source (full free)",
       "status": "done",
       "note": "Follow-up COMPLETE 16 Nov ~01:02: 3 fileable Lows verified by Kendall — C-02 (sam2) + C-04 (llama-cookbook messenger) new reports pending Andy's 'Ya kirim'; C-03 (mos.py JSON write) upgrades filed M-03 as a comment. M-03 filed 00:58 (#4667777066770815)."
+    },
+    {
+      "name": "Discovery part 4 — live + free + not paused",
+      "status": "done",
+      "note": "DONE 16 Nov ~02:06: 1 new candidate — Cronos Blockchain Protocols (active, free, rep 50, Crit $20k-$100k, $118,980 paid, base layer Go/Cosmos). 0 paused->active flips; BugRap no new (51); CodeHawks 0, Sherlock 0. MetaMask Validator Staking SC flipped active->paused (now a paused-watch trigger)."
+    },
+    {
+      "name": "Hunt Cronos Blockchain Protocols (full free)",
+      "status": "done",
+      "note": "DONE 16 Nov ~04:35: FINDING C-EIP712-PAYER (ethermint EIP-712 Fee.Payer uncommitted, fee theft from arbitrary address) — VERIFIED by Kendall (code + PoC re-run PASS + PR #1153 caveat confirmed). Severity Medium ($0) with High argument ($500-$20k); payout may be discounted as already-fixed-upstream (fix merged 13 Nov, not in deployed v1.8.2). Pending Andy's 'Ya kirim'."
     }
   ]
 }
