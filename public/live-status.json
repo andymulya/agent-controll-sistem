@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T21:23:16+07:00",
-  "updatedAtLabel": "15 Nov 2026, 21:23 WIB",
+  "updatedAt": "2026-11-15T21:29:42+07:00",
+  "updatedAtLabel": "15 Nov 2026, 21:29 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -101,10 +101,10 @@
     },
     {
       "name": "Hunt Sumer (full free)",
-      "detail": "BugRap id 37 • $5.000 • Solidity cross-chain synthetic + lending • gratis submit • hunt berjalan paralel dengan Layer3",
+      "detail": "BugRap id 37 • $5.000 • FINDING S-01 Medium (redeemFaceValue signature unscoped+replayable, live di Arbitrum suUSD 337,87 borrows) — verifikasi independen Kendall: PoC 5/5 PASS gas identik + live check Arbitrum — menunggu \"Ya kirim\" Andy",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:52 WIB",
-      "status": "running"
+      "status": "done"
     },
     {
       "name": "Hunt Snowbridge (full free)",
