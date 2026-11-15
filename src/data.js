@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 17:12 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 17:12 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 17:25 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 17:25 WIB'
 
 export const headerStats = [
   {
@@ -90,8 +90,8 @@ export const statusAgents = [
   {
     name: 'DSH, REA, Gemini CLI',
     role: 'Pendukung',
-    badge: { text: 'TERPASANG', kind: 'badge-via' },
-    text: 'DSH v0.2.2-rc.1 & REA v6.9.0 sudah terpasang. Gemini CLI v0.68.0 juga terpasang, tapi belum login — butuh login Google Andy sendiri.',
+    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
+    text: 'Ketiganya hilang kena ganti VM (npm global ikut kehapus) — belum di-install ulang. DSH sempat terpasang 15 Nov 16:29 tapi ikut hilang. Gemini tetap butuh login Google Andy sendiri setelah dipasang.',
   },
   {
     name: 'Kantor AI',
@@ -226,10 +226,10 @@ export const agents = [
     name: 'Gemini',
     role: 'Google Gemini CLI • Free tier',
     badge: { text: 'BELUM LOGIN', kind: 'badge-wait' },
-    text: 'CLI-nya sudah terpasang (v0.68.0), tapi belum login — loginnya harus pakai akun Google Andy sendiri. Habis login, jadi fallback + second opinion: kalau DeepSeek lagi limit atau Kendall butuh pembanding jawaban, Gemini yang cek silang.',
+    text: 'CLI-nya belum terpasang — hilang kena ganti VM (npm global ikut kehapus). Setelah dipasang, loginnya harus pakai akun Google Andy sendiri. Habis login, jadi fallback + second opinion: kalau DeepSeek lagi limit atau Kendall butuh pembanding jawaban, Gemini yang cek silang.',
     meta: [
-      ['Versi', '0.68.0'],
-      ['Status', 'Terpasang, belum login'],
+      ['Versi', '0.68.0 (belum terpasang)'],
+      ['Status', 'Belum terpasang + belum login'],
       ['Rencana', 'Fallback Tier 1'],
     ],
     actions: [{ type: 'copy', text: 'Login Gemini pakai akun Google-ku', label: 'Salin: Login Gemini', primary: false }],
@@ -238,12 +238,12 @@ export const agents = [
   {
     name: 'DSH',
     role: 'DeepSeek Harness • Open source',
-    badge: { text: 'TERPASANG', kind: 'badge-active' },
-    text: 'Runtime agen gratis buat jalanin kerja rutin secara mandiri — sudah terpasang dan dipasangkan ke DeepSeek biar sub-agent bisa kerja tanpa Kendall nungguin terus.',
+    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
+    text: 'Runtime agen gratis buat jalanin kerja rutin secara mandiri — sempat terpasang (v0.2.2-rc.1) tapi hilang kena ganti VM. Catatan: request DSH ke Apinex sempat 403, jadi Agen Bug tetap jalan lewat helper apinex.py, bukan DSH.',
     meta: [
       ['Jenis', 'Runtime agen open source'],
       ['Versi', '0.2.2-rc.1'],
-      ['Status', 'Terpasang'],
+      ['Status', 'Belum terpasang ulang'],
     ],
     actions: [{ type: 'copy', text: 'Cek status DSH', label: 'Salin: Cek status DSH', primary: false }],
     search: 'dsh deepseek harness open source runtime agen gratis terpasang 0.2.2',
@@ -251,12 +251,12 @@ export const agents = [
   {
     name: 'REA',
     role: 'Reverse Engineer Anything • MCP',
-    badge: { text: 'TERPASANG', kind: 'badge-active' },
-    text: 'Spesialis bedah kode & kontrak — sudah terpasang. Bantu audit kontrak / reverse engineering buat keperluan bounty hunting.',
+    badge: { text: 'BELUM DIPASANG', kind: 'badge-off' },
+    text: 'Spesialis bedah kode & kontrak — sempat terpasang (v6.9.0) tapi hilang kena ganti VM, belum di-install ulang. Kalau sudah dipasang lagi, bantu audit kontrak / reverse engineering buat keperluan bounty hunting.',
     meta: [
       ['Fokus', 'Audit & reverse engineering'],
       ['Versi', '6.9.0'],
-      ['Status', 'Terpasang'],
+      ['Status', 'Belum terpasang ulang'],
     ],
     actions: [{ type: 'copy', text: 'Pakai REA buat audit kontrak', label: 'Salin: Pakai REA', primary: false }],
     search: 'rea reverse engineer anything mcp audit kontrak bounty terpasang 6.9.0',
