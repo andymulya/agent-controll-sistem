@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T22:12:03+07:00",
-  "updatedAtLabel": "15 Nov 2026, 22:12 WIB",
+  "updatedAt": "2026-11-15T22:36:52+07:00",
+  "updatedAtLabel": "15 Nov 2026, 22:36 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -140,8 +140,13 @@
     },
     {
       "name": "Hunt Soex (full free)",
+      "status": "done",
+      "detail": "BugRap • $10.000 • NO-FIND — repo dibaca penuh (1.312 baris); program live BUKAN kode repo (redeploy Nov 2024 + Agu 2026, instruksi penarikan 15.000 SOL tak dikenal), vault kosong 0,001 SOL, mint mati — tidak ada dampak yang bisa diraih attacker"
+    },
+    {
+      "name": "Hunt InsurAce (full free)",
       "status": "running",
-      "detail": "BugRap • $10.000 • Solana Anchor • gratis submit"
+      "detail": "BugRap • $1.000 • ETH deployed SCs • gratis submit"
     }
   ]
 }
