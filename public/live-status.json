@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T19:30:49+07:00",
-  "updatedAtLabel": "15 Nov 2026, 19:30 WIB",
+  "updatedAt": "2026-11-15T19:53:23+07:00",
+  "updatedAtLabel": "15 Nov 2026, 19:53 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -52,10 +52,10 @@
     },
     {
       "name": "Builder btc-race-24h",
-      "detail": "make.fun • $250 USDC • bot trading BTC, entries tutup 21:28 WIB",
+      "detail": "make.fun • $250 USDC • 'Flush Reversion' SUBMITTED 15 Nov ~19:50 WIB, dev +$14,64 → lolos gate, ikut final race 21:43 WIB",
       "owner": "Agen Coding",
       "startedAt": "15 Nov 2026, 19:21 WIB",
-      "status": "running"
+      "status": "done"
     }
   ]
 }
