@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T20:23:15+07:00",
-  "updatedAtLabel": "15 Nov 2026, 20:23 WIB",
+  "updatedAt": "2026-11-15T20:24:20+07:00",
+  "updatedAtLabel": "15 Nov 2026, 20:24 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -73,10 +73,10 @@
     },
     {
       "name": "Cari program bounty baru",
-      "detail": "Agen Bug cari program BugRap + Cantina baru (GRATIS submit, live, belum dihunt) — daftar kandidat baru",
+      "detail": "7 program baru lolos filter (verifikasi live): Paxos $1jt, Symbiotic $500k, Midas $500k, Agglayer $250k, Snowbridge $75k, KUB $5k, Whitechain $10k — antrean hunt berikutnya Paxos",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:19 WIB",
-      "status": "running"
+      "status": "done"
     },
     {
       "name": "Hunt #9 RedStone",
