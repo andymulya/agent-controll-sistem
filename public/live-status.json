@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:32:18+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:32 WIB",
+  "updatedAt": "2026-11-15T23:36:40+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:36 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -175,8 +175,8 @@
     },
     {
       "name": "Hunt Meta Bug Bounty (full free)",
-      "status": "running",
-      "detail": "bugbounty.meta.com • min $500, max $300k • gratis • scope: Facebook/IG/WA/Muse/Meta AI/Open source • baca aturan testing dulu"
+      "status": "done",
+      "detail": "bugbounty.meta.com • FINDING M-01 (path traversal di llama download --manifest-file → arbitrary file write/RCE, PoC 2x PASS + re-run Kendall PASS, dedup bersih) — draft siap, menunggu Ya kirim Andy"
     },
     {
       "name": "Hunt Bitexen (full free)",
