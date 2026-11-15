@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:08:08+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:08 WIB",
+  "updatedAt": "2026-11-16T00:17:10+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:17 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -22,7 +22,7 @@
     },
     "xingchi": {
       "status": "active",
-      "models": 23
+      "models": 2
     }
   },
   "pollinations": {
@@ -195,8 +195,8 @@
     },
     {
       "name": "Hunt Meta #2 — open source (full free)",
-      "status": "running",
-      "detail": "bugbounty.meta.com • audit repo open-source Meta lain (llama utama, PurpleLlama) • M-01 sudah difile, jangan diulang"
+      "status": "done",
+      "detail": "bugbounty.meta.com • FINDING M-02 (Medium) TERVERIFIKASI: prompt-ops backend — traversal baca/tulis file + /api/settings bocor key penuh • PoC 5/7 PASS • dedup bersih • BELUM difile, nunggu Ya kirim Andy"
     },
     {
       "name": "Hunt Polkadot Bridge (full free)",
