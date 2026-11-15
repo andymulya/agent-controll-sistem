@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T22:57:10+07:00",
-  "updatedAtLabel": "15 Nov 2026, 22:57 WIB",
+  "updatedAt": "2026-11-15T23:00:15+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:00 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -155,8 +155,8 @@
     },
     {
       "name": "Hunt KUB Chain (full free)",
-      "status": "running",
-      "detail": "HackenProof • s.d. $5.000 • rep ? (cek live STEP 0) • gratis • L1 chain"
+      "status": "done",
+      "detail": "HackenProof • s.d. $5.000 • STOP di STEP 0 — butuh rep 100, Andy 80; buka setelah 1 Medium Resolved (+30) di Cronos/Whitechain"
     }
   ]
 }
