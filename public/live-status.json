@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T03:24:57+07:00",
-  "updatedAtLabel": "16 Nov 2026, 03:24 WIB",
+  "updatedAt": "2026-11-16T03:39:40+07:00",
+  "updatedAtLabel": "16 Nov 2026, 03:39 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -235,7 +235,7 @@
     {
       "name": "Hunt Cronos Blockchain Protocols (full free)",
       "status": "done",
-      "note": "DONE 16 Nov ~04:35: FINDING C-EIP712-PAYER (ethermint EIP-712 Fee.Payer uncommitted, fee theft from arbitrary address) — VERIFIED by Kendall (code + PoC re-run PASS + PR #1153 caveat confirmed). Severity Medium ($0) with High argument ($500-$20k); payout may be discounted as already-fixed-upstream (fix merged 13 Nov, not in deployed v1.8.2). Pending Andy's 'Ya kirim'."
+      "note": "DONE 16 Nov ~03:39: FINDING C-EIP712-PAYER FILED — HackenProof report CRONBP-532, status New, Medium, PoC attached. (PR #1153 caveat in report; payout $0 if Medium, $500-$20k if High accepted.)"
     }
   ]
 }
