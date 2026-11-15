@@ -10,7 +10,6 @@ import {
   statusAgents,
   STATUS_DATE,
   STATUS_FOOTER,
-  tabs,
   tiers,
 } from './data.js'
 import Astronaut3D from './components/Astronaut3D.jsx'
@@ -343,23 +342,11 @@ export default function App() {
             </svg>
             <input
               type="search"
-              placeholder="Cari agen atau perintah…  mis. DeepSeek, bounty, Vein"
+              placeholder="Cari agen atau perintah…"
               autoComplete="off"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
-          </div>
-          <div className="tabs" role="tablist">
-            {tabs.map((t) => (
-              <button
-                key={t.key}
-                type="button"
-                className={`tab ${tab === t.key ? 'active' : ''}`}
-                onClick={() => switchTab(t.key)}
-              >
-                {t.label}
-              </button>
-            ))}
           </div>
         </div>
 

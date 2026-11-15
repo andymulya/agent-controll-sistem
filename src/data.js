@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 18:21 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 18:21 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 18:33 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 18:33 WIB'
 
 export const headerStats = [
   {
@@ -343,8 +343,9 @@ export const tabs = [
 ]
 
 export const bottomNav = [
+  { nav: 'status', icon: '🏠', label: 'Status' },
   { nav: 'agen', icon: '🤖', label: 'Agen' },
-  { nav: 'llm', icon: '⚡', label: 'DeepSeek' },
+  { nav: 'llm', icon: '⚡', label: 'LLM' },
   { nav: 'tugas', icon: '✅', label: 'Tugas' },
   { nav: 'perintah', icon: '🔑', label: 'API Key' },
 ]
