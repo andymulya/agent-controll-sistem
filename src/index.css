@@ -1,0 +1,282 @@
+:root{
+  --bg:#04081a;
+  --bg2:#081026;
+  --card:rgba(13,27,56,.55);
+  --card2:rgba(17,34,66,.6);
+  --line:rgba(147,197,253,.16);
+  --line2:rgba(147,197,253,.30);
+  --text:#eef4ff;
+  --muted:#a9b9da;
+  --muted2:#7186ad;
+  --accent:#38bdf8;
+  --accent-dark:#2563eb;
+  --accent-soft:#dbeafe;
+  --blue:#38bdf8;
+  --blue2:#60a5fa;
+  --indigo:#818cf8;
+  --amber:#f59e0b;
+  --amber-bg:rgba(42,33,16,.85);
+  --gray-bg:rgba(30,42,66,.7);
+  --radius:18px;
+  --scroll:0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.5;padding-bottom:92px;
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(900px 520px at 85% -10%, rgba(56,189,248,.24), transparent 62%),
+    radial-gradient(720px 520px at -12% 28%, rgba(99,102,241,.20), transparent 62%),
+    radial-gradient(820px 620px at 50% 112%, rgba(14,165,233,.16), transparent 62%),
+    linear-gradient(180deg,#050a1f 0%,#04081a 45%,#030614 100%);
+  background-attachment:fixed;
+}
+/* Lapisan bintang + grid halus di atas background (di bawah konten) */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,.85), transparent),
+    radial-gradient(1px 1px at 34% 8%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 56% 18%, rgba(186,230,253,.9), transparent),
+    radial-gradient(1px 1px at 78% 30%, rgba(255,255,255,.55), transparent),
+    radial-gradient(1px 1px at 92% 12%, rgba(255,255,255,.8), transparent),
+    radial-gradient(1.5px 1.5px at 24% 48%, rgba(147,197,253,.8), transparent),
+    radial-gradient(1px 1px at 44% 62%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 66% 44%, rgba(255,255,255,.65), transparent),
+    radial-gradient(1.5px 1.5px at 88% 58%, rgba(186,230,253,.7), transparent),
+    radial-gradient(1px 1px at 8% 74%, rgba(255,255,255,.45), transparent),
+    radial-gradient(1px 1px at 30% 88%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1px 1px at 70% 82%, rgba(147,197,253,.55), transparent),
+    linear-gradient(rgba(96,165,250,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96,165,250,.045) 1px, transparent 1px);
+  background-size:auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,46px 46px,46px 46px;
+  opacity:.55;
+}
+/* Aurora biru yang bergerak pelan */
+body::after{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    radial-gradient(420px 300px at 18% 6%, rgba(56,189,248,.16), transparent 70%),
+    radial-gradient(460px 340px at 82% 22%, rgba(129,140,248,.14), transparent 70%),
+    radial-gradient(520px 380px at 50% 96%, rgba(56,189,248,.07), transparent 70%);
+  animation:auroraDrift 26s ease-in-out infinite alternate;
+  will-change:transform;
+}
+@keyframes auroraDrift{
+  from{transform:translate3d(-24px,-12px,0) scale(1)}
+  to{transform:translate3d(28px,18px,0) scale(1.06)}
+}
+/* Konten di atas lapisan background */
+.wrap{position:relative;z-index:1}
+.controls{position:relative;z-index:20}
+.bottom-nav{z-index:30}
+.toast{z-index:50}
+a{color:var(--accent);text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 8px}
+/* Animasi masuk */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes panelIn{
+  from{opacity:0;transform:translateY(12px) scale(.995)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes borderFlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 0 4px rgba(56,189,248,.18)}
+  50%{box-shadow:0 0 0 7px rgba(56,189,248,.07)}
+}
+/* header */
+.top{padding:10px 0 4px;transform:translateY(calc(var(--scroll,0) * -0.06px));will-change:transform}
+.eyebrow{animation:fadeUp .55s cubic-bezier(.22,.8,.32,1) backwards}
+.top h1{animation:fadeUp .6s .07s cubic-bezier(.22,.8,.32,1) backwards}
+.top .lead{animation:fadeUp .6s .14s cubic-bezier(.22,.8,.32,1) backwards}
+.top .notice{animation:fadeUp .6s .21s cubic-bezier(.22,.8,.32,1) backwards}
+.top .status-grid{animation:fadeUp .6s .28s cubic-bezier(.22,.8,.32,1) backwards}
+.eyebrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.01em}
+.pill-ceo{background:linear-gradient(135deg,#38bdf8,#2563eb);color:#04101f;box-shadow:0 4px 18px rgba(56,189,248,.35)}
+.pill-date{background:rgba(13,27,56,.6);color:var(--muted);border:1px solid var(--line);font-weight:600;backdrop-filter:blur(8px)}
+.pill-live{background:rgba(18,38,66,.65);color:#7dd3fc;border:1px solid #1e3a5f;backdrop-filter:blur(8px)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:glowPulse 2.4s ease-in-out infinite}
+h1{font-size:32px;line-height:1.05;letter-spacing:-.03em;margin:0 0 10px;font-weight:800}
+h1 span{background:linear-gradient(90deg,#38bdf8,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Astronot 3D melayang di header: mengambang (animasi) + miring 3D mengikuti mouse.
+   mix-blend-mode screen bikin latar gelap gambar menyatu dengan background navy. */
+.astronaut-scene{display:grid;place-items:center;margin:2px 0 6px;perspective:900px;position:relative}
+.astronaut-scene::before{content:'';position:absolute;width:280px;height:280px;background:radial-gradient(circle,rgba(56,189,248,.28),transparent 65%);filter:blur(10px);pointer-events:none}
+.astronaut-float{animation:astroFloat 6s ease-in-out infinite;will-change:transform;position:relative}
+.astronaut-tilt{transition:transform .25s ease;transform-style:preserve-3d;will-change:transform}
+.astronaut-img{width:min(230px,62vw);height:auto;display:block;-webkit-mask-image:radial-gradient(ellipse 75% 90% at 50% 50%,#000 55%,transparent 80%);mask-image:radial-gradient(ellipse 75% 90% at 50% 50%,#000 55%,transparent 80%)}
+@keyframes astroFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-14px) rotate(1.5deg)}}
+@media (prefers-reduced-motion:reduce){.astronaut-float{animation:none}}
+.lead{color:var(--muted);font-size:16px;line-height:1.6;margin:0;max-width:620px}
+.notice{
+  margin-top:16px;
+  background:linear-gradient(160deg,rgba(23,42,84,.55),rgba(10,20,44,.55));
+  border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:12px 14px;display:flex;gap:10px;
+  backdrop-filter:blur(12px);box-shadow:0 8px 28px rgba(1,6,24,.45), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.notice b{color:#fff}
+.notice p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+/* kartu kaca (glassmorphism) + animasi masuk berurutan */
+.glass, .stat, .step, .agent, .tier, .cmd, .access-card, .route, .meta, .empty{
+  background:linear-gradient(160deg,rgba(23,42,84,.55),rgba(10,20,44,.55));
+  border:1px solid var(--line);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 8px 28px rgba(1,6,24,.45), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.stat, .step, .agent, .tier, .cmd, .route-row, .access-card{
+  animation:fadeUp .5s cubic-bezier(.22,.8,.32,1) backwards;
+  animation-delay:calc(var(--i,0) * 55ms);
+}
+/* hover lift */
+.stat, .step, .agent, .tier, .cmd, .access-card{
+  transition:transform .28s cubic-bezier(.22,.8,.32,1), border-color .28s ease, box-shadow .28s ease;
+}
+.stat:hover, .step:hover, .access-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(147,197,253,.38);
+  box-shadow:0 16px 36px rgba(1,6,24,.6), 0 0 24px rgba(56,189,248,.12), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.agent:hover, .tier:hover, .cmd:hover{
+  border-color:rgba(147,197,253,.38);
+  box-shadow:0 16px 36px rgba(1,6,24,.6), 0 0 24px rgba(56,189,248,.12), inset 0 1px 0 rgba(255,255,255,.06);
+}
+/* kartu 3D: transform dikontrol JS saat mouse bergerak */
+.agent, .tier{transform-style:preserve-3d;transition:transform .18s ease-out, border-color .3s ease, box-shadow .3s ease}
+/* status grid */
+.status-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+@media(min-width:640px){.status-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.stat{border-radius:16px;padding:14px}
+.stat label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);font-weight:700;display:block;margin-bottom:6px}
+.stat strong{font-size:15px;line-height:1.35;display:block}
+.stat small{color:var(--muted);font-size:13px;line-height:1.45;display:block;margin-top:4px}
+.stat .ok{color:#7dd3fc}
+.stat .warn{color:#fbbf24}
+/* search + tabs */
+.controls{position:sticky;top:0;z-index:20;background:rgba(4,8,26,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:14px 0 10px;margin-top:8px;border-bottom:1px solid rgba(147,197,253,.08)}
+.search{position:relative}
+.search input{width:100%;height:50px;background:rgba(10,20,44,.65);border:1px solid var(--line2);border-radius:14px;color:#fff;padding:0 16px 0 44px;font-size:15px;outline:none;backdrop-filter:blur(10px);transition:border-color .2s ease, box-shadow .2s ease}
+.search input::placeholder{color:#7a8db5}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(56,189,248,.16)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.6}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0 2px}
+.tab{flex:1 1 auto;min-height:42px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:rgba(13,27,56,.55);color:var(--muted);font-weight:700;font-size:14px;white-space:nowrap;backdrop-filter:blur(10px);transition:background .25s ease, color .25s ease, border-color .25s ease, transform .2s ease, box-shadow .25s ease}
+@media(max-width:480px){.tab{flex:1 1 44%;font-size:13.5px}}
+.tab:hover{transform:translateY(-1px);border-color:rgba(147,197,253,.4);color:var(--text)}
+.tab.active{background:linear-gradient(135deg,#38bdf8,#2563eb);color:#04101f;border-color:transparent;box-shadow:0 6px 20px rgba(56,189,248,.35)}
+/* sections */
+.panel{display:none}
+.panel.active{display:block;animation:panelIn .38s cubic-bezier(.22,.8,.32,1) backwards}
+.section-title{font-size:20px;letter-spacing:-.02em;margin:22px 0 6px}
+.section-sub{color:var(--muted);font-size:14.5px;margin:0 0 14px;line-height:1.6}
+/* howto */
+.howto{display:grid;gap:10px}
+@media(min-width:640px){.howto{grid-template-columns:1fr 1fr 1fr}}
+.step{border-radius:16px;padding:16px}
+.step-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#38bdf8,#2563eb);color:#04101f;display:grid;place-items:center;font-weight:800;font-size:15px;margin-bottom:10px;box-shadow:0 4px 14px rgba(56,189,248,.3)}
+.step h3{margin:0 0 4px;font-size:15px}
+.step p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+/* routing */
+.route{border-radius:18px;padding:16px;margin-top:14px}
+.route-row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.route-row:last-child{border-bottom:none;padding-bottom:2px}
+.route-icon{width:40px;height:40px;flex:0 0 40px;border-radius:12px;background:rgba(30,46,84,.8);display:grid;place-items:center;font-size:18px;border:1px solid var(--line)}
+.route-row h4{margin:0;font-size:15px}
+.route-row p{margin:2px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
+/* agent cards */
+.agents{display:grid;gap:12px;perspective:1200px}
+@media(min-width:640px){.agents{grid-template-columns:1fr 1fr}}
+.agent{border-radius:18px;padding:16px;display:flex;flex-direction:column}
+.agent-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.agent h3{margin:0;font-size:17px;line-height:1.25}
+.agent .role{color:var(--accent);font-size:13px;font-weight:700;margin-top:2px}
+.badge{flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.06em;padding:6px 9px;border-radius:999px;white-space:nowrap}
+.badge-active{background:rgba(18,38,66,.8);color:#7dd3fc;border:1px solid #1e3a5f}
+.badge-wait{background:var(--amber-bg);color:#fcd34d;border:1px solid #4a3812}
+.badge-off{background:var(--gray-bg);color:#a8b5d8;border:1px solid var(--line2)}
+.badge-via{background:rgba(23,37,60,.8);color:#bfdbfe;border:1px solid #12294d}
+.agent p{color:var(--muted);font-size:14.5px;line-height:1.6;margin:10px 0 0}
+.meta{margin-top:12px;background:rgba(6,12,32,.6);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.meta div{display:flex;justify-content:space-between;gap:12px;padding:4px 0;font-size:13px}
+.meta span{color:var(--muted2)}
+.meta b{color:#e6edff;font-weight:600;text-align:right;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;word-break:break-all}
+.agent-actions{display:flex;gap:8px;margin-top:14px;margin-top:auto;padding-top:14px}
+.btn{flex:1;min-height:44px;border-radius:12px;border:1px solid var(--line2);background:rgba(30,42,66,.7);color:#fff;font-weight:700;font-size:14px;padding:0 12px;transition:transform .2s ease, background .2s ease, box-shadow .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(135deg,#38bdf8,#2563eb);color:#04101f;border-color:transparent;box-shadow:0 6px 18px rgba(56,189,248,.28)}
+.btn:active{transform:scale(.98)}
+/* tier */
+.tiers{display:grid;gap:12px;perspective:1200px}
+.tier{border-radius:18px;padding:16px}
+/* border gradasi bergerak di tier utama */
+.tier-featured{position:relative}
+.tier-featured::before{
+  content:'';position:absolute;inset:-1px;border-radius:19px;padding:1px;pointer-events:none;
+  background:linear-gradient(120deg,#38bdf8,#7dd3fc,#818cf8,#38bdf8);
+  background-size:300% 300%;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+  animation:borderFlow 7s ease infinite;
+}
+.tier-featured{box-shadow:0 8px 28px rgba(1,6,24,.45), 0 0 32px rgba(56,189,248,.14), inset 0 1px 0 rgba(255,255,255,.05)}
+.tier-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.tier-tag{font-size:11px;font-weight:800;letter-spacing:.07em;color:#04101f;background:linear-gradient(135deg,#38bdf8,#2563eb);padding:6px 9px;border-radius:999px}
+.tier-tag.alt{background:rgba(36,51,84,.85);color:#cbd5f5;border:1px solid var(--line2)}
+.tier h3{margin:8px 0 4px;font-size:17px}
+.tier p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6}
+.tier .endpoint{margin-top:10px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#bfdbfe;background:rgba(6,12,32,.6);border:1px solid var(--line);border-radius:10px;padding:9px 10px;word-break:break-all}
+.price{font-size:28px;font-weight:800;letter-spacing:-.03em}
+.price small{font-size:14px;color:var(--muted);font-weight:600}
+/* commands */
+.commands{display:grid;gap:10px}
+@media(min-width:640px){.commands{grid-template-columns:1fr 1fr}}
+.cmd{border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px}
+.cmd-text{flex:1;min-width:0}
+.cmd-text strong{display:block;font-size:15px;line-height:1.35}
+.cmd-text span{color:var(--muted);font-size:13px}
+.copy-btn{flex:0 0 auto;min-height:40px;padding:0 14px;border-radius:10px;background:linear-gradient(135deg,#38bdf8,#2563eb);color:#04101f;border:none;font-weight:800;font-size:13.5px;box-shadow:0 4px 14px rgba(56,189,248,.28);transition:transform .2s ease, background .2s ease}
+.copy-btn:hover{transform:translateY(-1px)}
+.copy-btn.copied{background:#fff;color:#111}
+.copy-btn:active{transform:scale(.97)}
+/* access */
+.access-card{border-radius:18px;padding:16px;margin-bottom:12px}
+.access-card h3{margin:0 0 6px;font-size:16px}
+.access-card p,.access-card li{color:var(--muted);font-size:14.5px;line-height:1.6}
+.access-card ol{margin:8px 0 0;padding-left:20px}
+.access-card li{margin:6px 0}
+.link-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 16px;border-radius:12px;background:linear-gradient(135deg,#38bdf8,#2563eb);color:#04101f !important;font-weight:800;font-size:14px;margin-top:10px;width:100%;box-shadow:0 6px 18px rgba(56,189,248,.28);transition:transform .2s ease, box-shadow .2s ease}
+.link-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(56,189,248,.35)}
+@media(min-width:640px){.link-btn{width:auto}}
+.empty{display:none;background:rgba(13,27,56,.55);border:1px dashed var(--line2);border-radius:14px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+.empty.show{display:block}
+/* bottom nav */
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(4,8,26,.88);border-top:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.bottom-nav button{min-height:52px;border:none;background:transparent;color:var(--muted);border-radius:12px;font-size:12px;font-weight:700;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:background .2s ease, color .2s ease, transform .2s ease}
+.bottom-nav button:hover{transform:translateY(-1px);color:var(--text)}
+.bottom-nav button span{font-size:19px;line-height:1}
+.bottom-nav button.active{background:rgba(26,43,80,.85);color:#fff;box-shadow:inset 0 0 0 1px rgba(96,165,250,.25)}
+.bottom-nav button.active span{color:var(--accent)}
+/* toast */
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:#fff;color:#0a0e0c;padding:11px 16px;border-radius:999px;font-weight:800;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.4);white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{padding:22px 0 6px;color:var(--muted2);font-size:13px;line-height:1.6;text-align:center}
+/* Kurangi gerakan kalau pengguna memintanya */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{animation:none !important;transition:none !important}
+  .top{transform:none !important}
+}
