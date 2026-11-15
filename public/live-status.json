@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T20:24:20+07:00",
-  "updatedAtLabel": "15 Nov 2026, 20:24 WIB",
+  "updatedAt": "2026-11-15T20:29:05+07:00",
+  "updatedAtLabel": "15 Nov 2026, 20:29 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -59,10 +59,10 @@
     },
     {
       "name": "Hunt #8 Kiln",
-      "detail": "Cantina • $1.000.000 • 3 codebase staking onchain • hunt berjalan",
+      "detail": "Cantina • $1.000.000 • DIBATALKAN Andy 15 Nov ~20:28 (Cantina batal, cari full free aja)",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 19:57 WIB",
-      "status": "running"
+      "status": "done"
     },
     {
       "name": "Hunt P12 (gratis)",
@@ -80,9 +80,23 @@
     },
     {
       "name": "Hunt #9 RedStone",
-      "detail": "Cantina • $250.000 • oracle contracts • prefer sisi Cantina (HackenProof 201+ submission) • pola P-09/P-01 • hunt berjalan paralel dengan Kiln",
+      "detail": "Cantina • $250.000 • DIBATALKAN Andy 15 Nov ~20:28 (Cantina batal, cari full free aja)",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:23 WIB",
+      "status": "done"
+    },
+    {
+      "name": "Hunt Nado (full free)",
+      "detail": "HackenProof • $500.000 • Solidity lending • gratis submit, KYC saat payout • verifikasi open/free dulu • pola P-06/P-07/P-09/P-17",
+      "owner": "Agen Bug (DeepSeek)",
+      "startedAt": "15 Nov 2026, 20:29 WIB",
+      "status": "running"
+    },
+    {
+      "name": "Hunt Layer3 (full free)",
+      "detail": "HackenProof • $500.000 • Solidity dapp • gratis submit, KYC saat payout • verifikasi open/free dulu • pola P-06/P-17/P-01",
+      "owner": "Agen Bug (DeepSeek)",
+      "startedAt": "15 Nov 2026, 20:29 WIB",
       "status": "running"
     }
   ]
