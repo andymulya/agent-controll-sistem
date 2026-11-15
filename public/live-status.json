@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:02:34+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:02 WIB",
+  "updatedAt": "2026-11-16T00:04:24+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:04 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -205,8 +205,13 @@
     },
     {
       "name": "Hunt EVAA (full free)",
+      "status": "done",
+      "detail": "HackenProof • $100–$5.000 • STOP di STEP 0 — program PAUSED (Submit disabled); tanpa gate, gratis, cuma 3 subs"
+    },
+    {
+      "name": "Hunt LiNEAR (full free)",
       "status": "running",
-      "detail": "HackenProof • $100–$5.000 • tanpa gate • gratis • TON (FunC/Tact) • cuma 3 subs • fokus HIGH/CRITICAL"
+      "detail": "HackenProof • $100–$5.000 • rep 50 • gratis • Rust/NEAR • fokus HIGH/CRITICAL • terakhir dari discovery part 2"
     }
   ]
 }
