@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T21:21:41+07:00",
-  "updatedAtLabel": "15 Nov 2026, 21:21 WIB",
+  "updatedAt": "2026-11-15T21:23:16+07:00",
+  "updatedAtLabel": "15 Nov 2026, 21:23 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -115,8 +115,13 @@
     },
     {
       "name": "Hunt Citrea (full free)",
+      "status": "done",
+      "detail": "HackenProof • $250.000 • STOP di STEP 0 — BERBAYAR (fee $5) + GATED (reputasi min 50, akun baru 0) + KYC Required; scout \"Free: Yes\" SALAH; tidak dihunt"
+    },
+    {
+      "name": "Hunt InitVerse (full free)",
       "status": "running",
-      "detail": "HackenProof • $250.000 • Bitcoin ZK rollup, EVM-adjacent • gratis submit • pola P-11/P-12"
+      "detail": "BugRap • $20.000 • INIChain TfhEVM/FHE • gratis submit • pola P-11/P-12"
     }
   ]
 }
