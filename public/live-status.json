@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:44:21+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:44 WIB",
+  "updatedAt": "2026-11-15T23:48:22+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:48 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -176,7 +176,7 @@
     {
       "name": "Hunt Meta Bug Bounty (full free)",
       "status": "done",
-      "detail": "bugbounty.meta.com • FINDING M-01 (path traversal di llama download --manifest-file → arbitrary file write/RCE, PoC 2x PASS + re-run Kendall PASS, dedup bersih) — draft siap, menunggu Ya kirim Andy"
+      "detail": "bugbounty.meta.com • FINDING M-01 FILED 23:48 WIB — laporan #4667696156778906, status New (path traversal llama download --manifest-file → arbitrary file write/RCE; PoC terlampir; gratis)"
     },
     {
       "name": "Hunt Bitexen (full free)",
