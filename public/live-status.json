@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T19:53:23+07:00",
-  "updatedAtLabel": "15 Nov 2026, 19:53 WIB",
+  "updatedAt": "2026-11-15T19:58:18+07:00",
+  "updatedAtLabel": "15 Nov 2026, 19:58 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -45,10 +45,10 @@
     },
     {
       "name": "Hunt #7 Euler v2",
-      "detail": "Cantina • s.d. $7.500.000 • hunt berjalan",
+      "detail": "Cantina • pot aktual $1.500.000 (bukan $7,5 jt headline) • NO-FIND (E-01 cycle-guard mati di PoC; 9 kandidat lain killed)",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 19:07 WIB",
-      "status": "running"
+      "status": "done"
     },
     {
       "name": "Builder btc-race-24h",
@@ -56,6 +56,13 @@
       "owner": "Agen Coding",
       "startedAt": "15 Nov 2026, 19:21 WIB",
       "status": "done"
+    },
+    {
+      "name": "Hunt #8 Kiln",
+      "detail": "Cantina • $1.000.000 • 3 codebase staking onchain • hunt berjalan",
+      "owner": "Agen Bug (DeepSeek)",
+      "startedAt": "15 Nov 2026, 19:57 WIB",
+      "status": "running"
     }
   ]
 }
