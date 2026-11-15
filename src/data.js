@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 17:25 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 17:25 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 17:31 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 17:31 WIB'
 
 export const headerStats = [
   {
@@ -86,6 +86,12 @@ export const statusAgents = [
     role: 'Agen aset 3D • sorceress.games',
     badge: { text: 'AKTIF', kind: 'badge-active' },
     text: 'Agen utama buat aset 3D game — Tripo v3.1, Meshy 7, auto-rig. Terhubung & teruji: 1 karakter cowok sudah jadi (45 kredit). Saldo tinggal 6 kredit — kalau habis, Kendall yang handle pakai jalur gratis.',
+  },
+  {
+    name: 'Xingchi API',
+    role: 'Gateway AI • api.xingchiapi.com',
+    badge: { text: 'TERHUBUNG', kind: 'badge-via' },
+    text: 'Terhubung & teruji: 2 model terdaftar (gpt-6-astra, gpt-6.1-sol). Chat langsung via script ditolak — hanya klien coding (dsh) yang diizinkan; jalur dsh sedang dites.',
   },
   {
     name: 'DSH, REA, Gemini CLI',
@@ -221,6 +227,20 @@ export const agents = [
     ],
     actions: [{ type: 'copy', text: 'Buatkan aset 3D buat Harvest Valley', label: 'Salin: Minta aset 3D', primary: false }],
     search: 'sorceress aset 3d tripo meshy rig game harvest valley',
+  },
+  {
+    name: 'Xingchi API',
+    role: 'api.xingchiapi.com • Gateway AI',
+    badge: { text: 'TERHUBUNG', kind: 'badge-via' },
+    text: 'Gateway AI OpenAI-compatible — terhubung & teruji: daftar model keluar (gpt-6-astra, gpt-6.1-sol). Batasan: chat langsung via script/SDK ditolak situsnya (403) — hanya klien coding yang diizinkan (Codex, Claude Code, DeepSeek Harness, dll). Jalur pakai dsh sedang dites.',
+    meta: [
+      ['Model', 'gpt-6-astra, gpt-6.1-sol'],
+      ['Uji nyata', 'List model ✓ • chat script 403'],
+      ['Jalur', 'Hanya klien coding (dsh)'],
+      ['Aturan', 'Tanpa data sensitif'],
+    ],
+    actions: [{ type: 'copy', text: 'Cek status Xingchiapi', label: 'Salin: Cek status Xingchi', primary: false }],
+    search: 'xingchiapi gateway ai gpt-6 astra sol terhubung dsh coding client',
   },
   {
     name: 'Gemini',
