@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:04:24+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:04 WIB",
+  "updatedAt": "2026-11-16T00:08:08+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:08 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -210,8 +210,13 @@
     },
     {
       "name": "Hunt LiNEAR (full free)",
+      "status": "done",
+      "detail": "HackenProof • $100–$5.000 • STOP di STEP 0 — program PAUSED (Submit disabled); rep 50, gratis"
+    },
+    {
+      "name": "Discovery part 3 — HackenProof hal 21+ (full free, aktif)",
       "status": "running",
-      "detail": "HackenProof • $100–$5.000 • rep 50 • gratis • Rust/NEAR • fokus HIGH/CRITICAL • terakhir dari discovery part 2"
+      "detail": "Cari program baru yang masih AKTIF (3 program part 2 ternyata PAUSED) • fokus HIGH/CRITICAL"
     }
   ]
 }
