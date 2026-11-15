@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:48:22+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:48 WIB",
+  "updatedAt": "2026-11-16T00:00:15+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:00 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -13,8 +13,8 @@
       "models": 44
     },
     "iamhc": {
-      "status": "active",
-      "models": 25
+      "status": "unknown",
+      "models": null
     },
     "agentrouter": {
       "status": "active",
@@ -192,6 +192,11 @@
       "name": "Hunt RISC Zero zkVM (full free)",
       "status": "running",
       "detail": "HackenProof • $250–$150.000 • rep 50 • gratis • Rust zkVM • $68.250 sudah dibayar (pembayar terbesar)"
+    },
+    {
+      "name": "Hunt Meta #2 — open source (full free)",
+      "status": "running",
+      "detail": "bugbounty.meta.com • audit repo open-source Meta lain (llama utama, PurpleLlama) • M-01 sudah difile, jangan diulang"
     }
   ]
 }
