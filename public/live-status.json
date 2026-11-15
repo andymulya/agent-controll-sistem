@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:58:53+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:58 WIB",
+  "updatedAt": "2026-11-16T01:02:25+07:00",
+  "updatedAtLabel": "16 Nov 2026, 01:02 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -224,8 +224,8 @@
     },
     {
       "name": "Hunt Meta #3 — open source (full free)",
-      "status": "running",
-      "note": "M-03 (C-01 audiocraft, Low) FILED 16 Nov ~00:58 (#4667777066770815, status New). Follow-up still running: llama-cookbook audit + C-03 corrected PoC + C-02 runtime PoC."
+      "status": "done",
+      "note": "Follow-up COMPLETE 16 Nov ~01:02: 3 fileable Lows verified by Kendall — C-02 (sam2) + C-04 (llama-cookbook messenger) new reports pending Andy's 'Ya kirim'; C-03 (mos.py JSON write) upgrades filed M-03 as a comment. M-03 filed 00:58 (#4667777066770815)."
     }
   ]
 }
