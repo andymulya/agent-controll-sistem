@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:36:40+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:36 WIB",
+  "updatedAt": "2026-11-15T23:42:27+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:42 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -180,8 +180,13 @@
     },
     {
       "name": "Hunt Bitexen (full free)",
+      "status": "done",
+      "detail": "HackenProof • $50–$3.000 • NO-FIND (EXEN 0xe6cc10ef… — 8 fungsi saja, tanpa mint/owner/approve, PoC 10/10 PASS di bytecode live)"
+    },
+    {
+      "name": "Hunt Flipcash Reserve (full free)",
       "status": "running",
-      "detail": "HackenProof • $50–$3.000 • tanpa gate reputasi • gratis • tanpa KYC • Solidity • target verifikasi live di STEP 0"
+      "detail": "HackenProof • $250.000 FLAT • Critical only, winner-takes-all • rep 50 • gratis • Solana (Rust/Anchor) • drain USDF / drain BBB / stall Reserve"
     }
   ]
 }
