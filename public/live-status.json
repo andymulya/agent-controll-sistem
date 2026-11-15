@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:42:27+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:42 WIB",
+  "updatedAt": "2026-11-15T23:44:21+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:44 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -170,8 +170,8 @@
     },
     {
       "name": "Hunt SG Forge (full free)",
-      "status": "running",
-      "detail": "HackenProof • $200–$10.000 • tanpa gate reputasi • gratis • tanpa KYC • stablecoin EURCV/USDCV"
+      "status": "done",
+      "detail": "HackenProof • $200–$10.000 • NO-FIND (EURCV/USDCV V4 — PoC 7/7 PASS 2x, upgradeTo(0) reverts, redemption fix live; Solana side tidak dihunt)"
     },
     {
       "name": "Hunt Meta Bug Bounty (full free)",
@@ -187,6 +187,11 @@
       "name": "Hunt Flipcash Reserve (full free)",
       "status": "running",
       "detail": "HackenProof • $250.000 FLAT • Critical only, winner-takes-all • rep 50 • gratis • Solana (Rust/Anchor) • drain USDF / drain BBB / stall Reserve"
+    },
+    {
+      "name": "Hunt RISC Zero zkVM (full free)",
+      "status": "running",
+      "detail": "HackenProof • $250–$150.000 • rep 50 • gratis • Rust zkVM • $68.250 sudah dibayar (pembayar terbesar)"
     }
   ]
 }
