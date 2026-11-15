@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T20:29:05+07:00",
-  "updatedAtLabel": "15 Nov 2026, 20:29 WIB",
+  "updatedAt": "2026-11-15T20:52:15+07:00",
+  "updatedAtLabel": "15 Nov 2026, 20:52 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -87,16 +87,23 @@
     },
     {
       "name": "Hunt Nado (full free)",
-      "detail": "HackenProof • $500.000 • Solidity lending • gratis submit, KYC saat payout • verifikasi open/free dulu • pola P-06/P-07/P-09/P-17",
+      "detail": "HackenProof • $500.000 • FINDING C-01 Low (socializeSubaccount DBZ saat OI==0) — PoC 4/4 + live terverifikasi, menunggu \"Ya kirim\" Andy",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:29 WIB",
-      "status": "running"
+      "status": "done"
     },
     {
       "name": "Hunt Layer3 (full free)",
       "detail": "HackenProof • $500.000 • Solidity dapp • gratis submit, KYC saat payout • verifikasi open/free dulu • pola P-06/P-17/P-01",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:29 WIB",
+      "status": "running"
+    },
+    {
+      "name": "Hunt Sumer (full free)",
+      "detail": "BugRap id 37 • $5.000 • Solidity cross-chain synthetic + lending • gratis submit • hunt berjalan paralel dengan Layer3",
+      "owner": "Agen Bug (DeepSeek)",
+      "startedAt": "15 Nov 2026, 20:52 WIB",
       "status": "running"
     }
   ]
