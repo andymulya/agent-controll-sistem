@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T21:47:06+07:00",
-  "updatedAtLabel": "15 Nov 2026, 21:47 WIB",
+  "updatedAt": "2026-11-15T21:51:58+07:00",
+  "updatedAtLabel": "15 Nov 2026, 21:51 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -127,6 +127,16 @@
       "name": "Hunt Bifrost (full free)",
       "status": "running",
       "detail": "BugRap • $20.000 • Substrate/Rust • gratis submit"
+    },
+    {
+      "name": "Cari program HackenProof rep ≤80",
+      "status": "done",
+      "detail": "30 program dicek live — 2 lolos: Cronos (rep 50, gratis, s.d. $250k) + Whitechain Bridge (rep 50, gratis, s.d. $10k); Layer3 + Snowbridge butuh rep 100; tidak ada program gratis tanpa syarat reputasi"
+    },
+    {
+      "name": "Hunt Cronos (full free)",
+      "status": "running",
+      "detail": "HackenProof • s.d. $250.000 • rep 50 (Andy 80, bisa submit) • gratis • EVM/Solidity VVS+Tectonic • Medium/Low $0, High+ berbayar"
     }
   ]
 }
