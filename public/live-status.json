@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T20:59:04+07:00",
-  "updatedAtLabel": "15 Nov 2026, 20:59 WIB",
+  "updatedAt": "2026-11-15T21:21:41+07:00",
+  "updatedAtLabel": "15 Nov 2026, 21:21 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -108,10 +108,15 @@
     },
     {
       "name": "Hunt Snowbridge (full free)",
-      "detail": "HackenProof • s.d. $75.000 • bridge Polkadot-Ethereum • terbukti bayar $35.100 • PoC dua sisi, bar tinggi • pola P-12",
+      "detail": "HackenProof • s.d. $75.000 • NO-FIND (12 kandidat gugur; Gateway+Beefy dibaca penuh, live pin Gateway 0x27ca963c, agent pegang ~$5jt; Substrate TIDAK diaudit)",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:59 WIB",
-      "status": "running"
+      "status": "done"
+    },
+    {
+      "name": "Hunt Citrea (full free)",
+      "status": "running",
+      "detail": "HackenProof • $250.000 • Bitcoin ZK rollup, EVM-adjacent • gratis submit • pola P-11/P-12"
     }
   ]
 }
