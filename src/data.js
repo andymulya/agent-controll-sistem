@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 18:01 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 18:01 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 18:03 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 18:03 WIB'
 
 export const headerStats = [
   {
@@ -94,6 +94,24 @@ export const statusAgents = [
     text: 'Aktif & teruji lewat OpenCode: 2 model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Hanya klien coding yang diizinkan situsnya — script/SDK langsung ditolak, dan dsh tidak bisa karena jalurnya /v1/messages (ditolak grup key ini).',
   },
   {
+    name: 'Iamhc',
+    role: 'Otak sub-agent kedua • api.iamhc.cn',
+    badge: { text: 'AKTIF', kind: 'badge-active' },
+    text: 'Aktif & teruji: model auto (router) jawab probe reentrancy dengan benar. Lambat (sekitar 30 detik per jawaban karena reasoning). Data sensitif Andy tidak pernah dikirim ke sini.',
+  },
+  {
+    name: 'AgentRouter',
+    role: 'Relay AI gratis • agentrouter.org',
+    badge: { text: 'AKTIF', kind: 'badge-active' },
+    text: 'Aktif & teruji: 3 model (gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol), chat jalan lewat Responses API. Prompt harus bahasa Inggris — Indonesia diblokir.',
+  },
+  {
+    name: 'OpenCode',
+    role: 'Harness coding agent • opencode.ai',
+    badge: { text: 'AKTIF', kind: 'badge-active' },
+    text: 'Terpasang (v1.19.5) & teruji: menjalankan Xingchi gpt-6.1-sol, chat dijawab benar dalam sekitar 10 detik. Model gratis bawaannya lagi limit di IP bersama — jadi pakai model dari gateway yang terhubung.',
+  },
+  {
     name: 'Kantor AI',
     role: 'Tim sub-agent via Kendall',
     badge: { text: 'LEWAT KENDALL', kind: 'badge-via' },
@@ -134,6 +152,40 @@ export const tiers = [
     endpoint: 'https://text.pollinations.ai/',
     link: null,
     search: 'pollinations text gratis tanpa key tanpa kuota one-shot',
+    amber: false,
+  },
+  {
+    tag: 'RUTE LAIN — AKTIF',
+    tagAlt: false,
+    price: true,
+    title: 'Iamhc — model auto (router)',
+    html: 'Status: <b style="color:#7dd3fc">AKTIF — teruji jawab probe reentrancy dengan benar</b> • Model auto (router) • Lambat, sekitar 30 detik per jawaban karena reasoning • Data sensitif Andy tidak pernah dikirim ke sini.',
+    endpoint: 'Model: auto • api.iamhc.cn',
+    link: null,
+    search: 'iamhc auto router aktif teruji reentrancy lambat',
+    amber: false,
+  },
+  {
+    tag: 'RUTE LAIN — AKTIF',
+    tagAlt: false,
+    price: true,
+    title: 'AgentRouter — gpt-6.1-sol',
+    html: 'Status: <b style="color:#7dd3fc">AKTIF — teruji lewat Responses API</b> (1+1 dijawab benar) • 3 model: gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol • Prompt HARUS bahasa Inggris — Indonesia diblokir • Kredit gratis $100 ($200 referral).',
+    endpoint: 'agentrouter.org',
+    link: 'https://agentrouter.org',
+    linkText: 'Buka agentrouter.org ↗',
+    search: 'agentrouter gpt-6.1-sol responses aktif gratis inggris',
+    amber: false,
+  },
+  {
+    tag: 'RUTE LAIN — AKTIF',
+    tagAlt: false,
+    price: true,
+    title: 'Xingchi — gpt-6.1-sol via OpenCode',
+    html: 'Status: <b style="color:#7dd3fc">AKTIF — teruji lewat OpenCode</b>, chat dijawab benar dalam sekitar 10 detik • 2 model: gpt-6-astra, gpt-6.1-sol • Hanya klien coding yang diizinkan situsnya • Tanpa data sensitif.',
+    endpoint: 'Model: gpt-6.1-sol • api.xingchiapi.com/v1',
+    link: null,
+    search: 'xingchi gpt-6.1-sol opencode aktif teruji coding client',
     amber: false,
   },
 ]
@@ -228,6 +280,20 @@ export const agents = [
       { type: 'link', href: 'https://agentrouter.org', label: 'Buka agentrouter.org ↗' },
     ],
     search: 'agentrouter relay ai gratis claude opus gpt-6 astra deepseek v4 github linuxdo',
+  },
+  {
+    name: 'OpenCode',
+    role: 'Harness coding agent • opencode.ai',
+    badge: { text: '● AKTIF', kind: 'badge-active' },
+    text: 'Agen coding open-source yang menjalankan model dari gateway yang terhubung — dipakai sebagai jalur Xingchi (gpt-6.1-sol), teruji chat dijawab benar dalam sekitar 10 detik. Model gratis bawaannya (mis. glm-5.3-flash-free) lagi limit di IP bersama, jadi pakai gateway sendiri.',
+    meta: [
+      ['Versi', '1.19.5'],
+      ['Jalur', 'Xingchi gpt-6.1-sol ✓'],
+      ['Model gratis', 'Limit (IP bersama)'],
+      ['Lisensi', 'MIT, open source'],
+    ],
+    actions: [{ type: 'copy', text: 'Cek status OpenCode', label: 'Salin: Cek status OpenCode', primary: false }],
+    search: 'opencode harness coding agent xingchi gpt-6 aktif teruji',
   },
   {
     name: 'Kantor AI',
