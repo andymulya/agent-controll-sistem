@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T05:14:33+07:00",
-  "updatedAtLabel": "16 Nov 2026, 05:14 WIB",
+  "updatedAt": "2026-11-16T05:27:21+07:00",
+  "updatedAtLabel": "16 Nov 2026, 05:27 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -263,11 +263,6 @@
       "note": "PENDING Andy: (a) tapbit web langsung (Med $2.000 flat, tanpa prasyarat), (b) buat akun YesWeHack + KYC → Kiteworks (Med €2.500–€3.000) / YWH-sendiri (cost 1) / E-Voting (Crit €230k, butuh 10 kredit), (c) buat akun Intigriti → NVIDIA (Med $2.000 flat) / Adobe / Lightspark, (d) Meta OSS llama3 (EV rendah)."
     },
     {
-      "name": "Hunt Tapbit web (HackenProof)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~05:14 at Andy's 'kerjakan aja tapbit': fase 1 unauthenticated (IDOR publik, API publik, auth-bypass login, XSS); Med $2.000 flat, Crit $10.000, rep 50, FREE, no KYC; STEP 0 re-verified live ~05:12."
-    },
-    {
       "name": "Akun YesWeHack + KYC",
       "status": "running",
       "note": "RUNNING 16 Nov ~05:14: signup browser (andymulya / andymulya13@gmail.com); password via secure entry; KYC Andy-side (pending)."
@@ -276,6 +271,11 @@
       "name": "Akun Intigriti",
       "status": "running",
       "note": "RUNNING 16 Nov ~05:14: signup browser (andymulya / andymulya13@gmail.com); password via secure entry."
+    },
+    {
+      "name": "Hunt Tapbit web (HackenProof)",
+      "status": "done",
+      "note": "Fase 1 DONE 16 Nov ~05:26: NO-FIND — WAF blokir semua curl dari VM, probe live belum jalan; probe browser RUNNING (poc_public_api_browser.js di www.tapbit.com); 2 lead fase-2 (Affiliate IDOR L-1 Medium $2.000, signature binding L-2) butuh akun + API key Tapbit Andy (KYC) — keputusan Andy pending. Log hunt-log-TAPBIT-2026-11-16.md."
     }
   ]
 }
