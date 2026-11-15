@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T22:07:35+07:00",
-  "updatedAtLabel": "15 Nov 2026, 22:07 WIB",
+  "updatedAt": "2026-11-15T22:12:03+07:00",
+  "updatedAtLabel": "15 Nov 2026, 22:12 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -125,8 +125,8 @@
     },
     {
       "name": "Hunt Bifrost (full free)",
-      "status": "running",
-      "detail": "BugRap • $20.000 • Substrate/Rust • gratis submit"
+      "status": "done",
+      "detail": "BugRap • $20.000 • NO-FIND — repo runtime 404 (org rename), audit live-state: oracle on-chain mati 150 hari tapi aritmetika mispricing tidak tembus haircut CF (vKSM→KSM 0,78 < 1; KSM→vKSM 0,62 < 1), 13 borrower sehat"
     },
     {
       "name": "Cari program HackenProof rep ≤80",
@@ -137,6 +137,11 @@
       "name": "Hunt Cronos (full free)",
       "status": "running",
       "detail": "HackenProof • s.d. $250.000 • rep 50 (Andy 80, bisa submit) • gratis • EVM/Solidity VVS+Tectonic • Medium/Low $0, High+ berbayar"
+    },
+    {
+      "name": "Hunt Soex (full free)",
+      "status": "running",
+      "detail": "BugRap • $10.000 • Solana Anchor • gratis submit"
     }
   ]
 }
