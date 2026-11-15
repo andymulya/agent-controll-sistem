@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T04:10:19+07:00",
-  "updatedAtLabel": "16 Nov 2026, 04:10 WIB",
+  "updatedAt": "2026-11-16T04:34:48+07:00",
+  "updatedAtLabel": "16 Nov 2026, 04:34 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -239,8 +239,8 @@
     },
     {
       "name": "Discovery part 5 — cari program baru (full free)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~04:00 at Andy's word: re-scan HackenProof 332 slugs (flips paused→active) + BugRap + CodeHawks/Sherlock; only live + free + not paused + rep ≤80."
+      "status": "done",
+      "note": "DONE 16 Nov ~04:34: NOL kandidat baru — direktori beku sejak part 4 (0 flip, 0 program baru, 332 slug identik); BugRap 51, CodeHawks/Sherlock 0. SC gratis HABIS; tersisa web-only (tapbit/synfutures/whitebit) + fee-exception ($5–$7 NEAR Intents/AA-bugs)."
     },
     {
       "name": "Hunt Meta AI / Muse live surface (tahap 1)",
@@ -251,6 +251,11 @@
       "name": "Meta live probing (V-02/V-01/V-05)",
       "status": "pending",
       "note": "PENDING test accounts: butuh 2 test account Meta (A attacker + B victim) + 2 test account Muse + connector test di B + test site/domain — dari Andy; baru probing via browser."
+    },
+    {
+      "name": "Next hunt — keputusan Andy",
+      "status": "pending",
+      "note": "PENDING Andy: (a) fee $5–$7 NEAR Intents SC / account-abstraction-bugs (Med berbayar tertinggi), (b) web gratis tapbit → synfutures → whitebit, (c) Meta live probing (butuh 2 test account)."
     }
   ]
 }
