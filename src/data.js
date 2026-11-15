@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 18:06 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 18:06 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 18:21 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 18:21 WIB'
 
 export const headerStats = [
   {
@@ -116,6 +116,19 @@ export const statusAgents = [
     role: 'Tim sub-agent via Kendall',
     badge: { text: 'LEWAT KENDALL', kind: 'badge-via' },
     text: 'Bounty hunter, make.fun builder, Vein watch, Godot — semua jalan sebagai sub-agent lewat Kendall.',
+  },
+]
+
+// Fallback statis untuk "Tugas berjalan" — dipakai hanya bila live-status.json
+// tidak bisa diambil. Nilai live-nya berasal dari scripts/live-state.json
+// (diperbarui Kendall tiap tugas mulai/selesai) dan dipublish lewat refresh.
+export const runningTasks = [
+  {
+    name: 'Hunt #5 DeepBrain Chain',
+    owner: 'Agen Bug (DeepSeek)',
+    detail: 'BugRap id 117 • hadiah sampai $30k USDC • audit smart contract',
+    startedAt: '15 Nov 2026, 18:10 WIB',
+    status: 'running',
   },
 ]
 
@@ -323,13 +336,15 @@ export const commands = [
 
 export const tabs = [
   { key: 'status', label: 'Status' },
-  { key: 'llm', label: 'LLM & Kredit' },
+  { key: 'llm', label: 'LLM' },
   { key: 'agen', label: 'Agen' },
-  { key: 'perintah', label: 'Perintah & Akses' },
+  { key: 'tugas', label: 'Tugas' },
+  { key: 'perintah', label: 'Perintah' },
 ]
 
 export const bottomNav = [
   { nav: 'agen', icon: '🤖', label: 'Agen' },
   { nav: 'llm', icon: '⚡', label: 'DeepSeek' },
+  { nav: 'tugas', icon: '✅', label: 'Tugas' },
   { nav: 'perintah', icon: '🔑', label: 'API Key' },
 ]

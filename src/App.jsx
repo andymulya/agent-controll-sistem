@@ -6,6 +6,7 @@ import {
   headerStats,
   howtoSteps,
   routeRows,
+  runningTasks,
   statusAgents,
   STATUS_DATE,
   STATUS_FOOTER,
@@ -260,6 +261,7 @@ export default function App() {
   const visibleCommands = commands.filter((c) => matches(c, q))
   const visibleTiers = tiers.filter((t) => matches(t, q)).map((t) => applyLive(t, values))
   const liveStatusAgents = statusAgents.map((a) => applyLive(a, values))
+  const tasks = live?.tasks?.length ? live.tasks : runningTasks
 
   // Saat mencari dari tab Status, lompat ke tab yang ada hasilnya (agen > perintah)
   useEffect(() => {
@@ -442,6 +444,40 @@ export default function App() {
             </div>
             {q && visibleAgents.length === 0 && (
               <div className="empty show">Nggak ketemu agennya. Coba kata lain, mis. “DeepSeek” atau “bounty”.</div>
+            )}
+          </section>
+        )}
+
+        {tab === 'tugas' && (
+          <section className="panel active">
+            <h2 className="section-title">Tugas berjalan</h2>
+            <p className="section-sub">
+              Apa yang sedang dikerjakan tim sekarang — datanya live, diperbarui otomatis tanpa ubah kode.
+            </p>
+            <div className="agents">
+              {tasks.map((t, i) => (
+                <div className="agent" key={t.name} style={{ '--i': i }}>
+                  <div className="agent-head">
+                    <div>
+                      <h3>{t.name}</h3>
+                      <div className="role">{t.owner}</div>
+                    </div>
+                    <span className={`badge ${t.status === 'running' ? 'badge-active' : 'badge-via'}`}>
+                      {t.status === 'running' ? 'BERJALAN' : 'SELESAI'}
+                    </span>
+                  </div>
+                  <p>{t.detail}</p>
+                  <div className="meta">
+                    <div>
+                      <span>Mulai</span>
+                      <b>{t.startedAt}</b>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {tasks.length === 0 && (
+              <div className="empty show">Belum ada tugas berjalan.</div>
             )}
           </section>
         )}
