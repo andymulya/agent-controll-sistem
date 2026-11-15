@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:17:10+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:17 WIB",
+  "updatedAt": "2026-11-16T00:26:19+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:26 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -190,13 +190,15 @@
     },
     {
       "name": "Hunt RISC Zero zkVM (full free)",
-      "status": "running",
-      "detail": "HackenProof • $250–$150.000 • rep 50 • gratis • Rust zkVM • $68.250 sudah dibayar (pembayar terbesar)"
+      "status": "done",
+      "detail": "HackenProof • $250–$150.000 • rep 50 • gratis • Rust zkVM • $68.250 sudah dibayar (pembayar terbesar)",
+      "note": "FINDING R-01 Critical — guest→kernel escape via unvalidated SHA/Poseidon2 ecall pointers, forged receipt verifies. Verified independently by Kendall (grind triple re-checked, ELF addresses, code links). Awaiting Andy's 'Ya kirim'."
     },
     {
       "name": "Hunt Meta #2 — open source (full free)",
       "status": "done",
-      "detail": "bugbounty.meta.com • FINDING M-02 (Medium) TERVERIFIKASI: prompt-ops backend — traversal baca/tulis file + /api/settings bocor key penuh • PoC 5/7 PASS • dedup bersih • BELUM difile, nunggu Ya kirim Andy"
+      "detail": "bugbounty.meta.com • FINDING M-02 (Medium) TERVERIFIKASI: prompt-ops backend — traversal baca/tulis file + /api/settings bocor key penuh • PoC 5/7 PASS • dedup bersih • BELUM difile, nunggu Ya kirim Andy",
+      "note": "FINDING M-02 Medium verified. Filing IN PROGRESS via browser (Andy approved 'Ya kirim' 00:22). Note: Andy's Meta/Facebook account was locked by Meta security 00:19 — filing may block on login until he unlocks it."
     },
     {
       "name": "Hunt Polkadot Bridge (full free)",
