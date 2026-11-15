@@ -52,14 +52,27 @@ function useLiveStatus() {
   const [live, setLive] = useState(null)
   useEffect(() => {
     let cancelled = false
-    fetch('/live-status.json', { cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (!cancelled && d) setLive(d)
-      })
-      .catch(() => {})
+    const load = () => {
+      fetch('/live-status.json', { cache: 'no-store' })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (cancelled || !d) return
+          // Update state only when the data actually changed, so the UI
+          // refreshes live without a browser reload (and without needless re-renders).
+          setLive((prev) => {
+            const next = JSON.stringify(d)
+            return prev && JSON.stringify(prev) === next ? prev : d
+          })
+        })
+        .catch(() => {})
+    }
+    load()
+    // Poll the live file: every new push (task started/finished, credits
+    // changed) reaches the screen by setState, no browser refresh needed.
+    const timer = setInterval(load, 30000)
     return () => {
       cancelled = true
+      clearInterval(timer)
     }
   }, [])
   return live
