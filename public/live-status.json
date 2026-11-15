@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:54:23+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:54 WIB",
+  "updatedAt": "2026-11-16T00:57:11+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:57 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -225,7 +225,7 @@
     {
       "name": "Hunt Meta #3 — open source (full free)",
       "status": "running",
-      "note": "PARTIAL 16 Nov ~00:53: C-01 (audiocraft mos.py /audio, Low) VERIFIED by Kendall + dedup clean — awaiting Andy's 'Ya kirim'. Follow-up running: llama-cookbook audit + C-03 corrected PoC + C-02 runtime PoC."
+      "note": "C-01 (audiocraft mos.py /audio, Low) APPROVED by Andy 00:56 ('Ya kirim') — filing underway via browser. Follow-up still running: llama-cookbook audit + C-03 corrected PoC + C-02 runtime PoC."
     }
   ]
 }
