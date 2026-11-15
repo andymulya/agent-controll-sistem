@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:00:15+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:00 WIB",
+  "updatedAt": "2026-11-16T00:01:22+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:01 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -13,8 +13,8 @@
       "models": 44
     },
     "iamhc": {
-      "status": "unknown",
-      "models": null
+      "status": "active",
+      "models": 25
     },
     "agentrouter": {
       "status": "active",
@@ -185,8 +185,8 @@
     },
     {
       "name": "Hunt Flipcash Reserve (full free)",
-      "status": "running",
-      "detail": "HackenProof • $250.000 FLAT • Critical only, winner-takes-all • rep 50 • gratis • Solana (Rust/Anchor) • drain USDF / drain BBB / stall Reserve"
+      "status": "done",
+      "detail": "HackenProof • $250.000 FLAT Critical only • NO-FIND (16 kandidat killed; brine_fp 192-bit, curve eksak, VM check_omnibus; 2 pass sepakat 0 finding)"
     },
     {
       "name": "Hunt RISC Zero zkVM (full free)",
@@ -197,6 +197,11 @@
       "name": "Hunt Meta #2 — open source (full free)",
       "status": "running",
       "detail": "bugbounty.meta.com • audit repo open-source Meta lain (llama utama, PurpleLlama) • M-01 sudah difile, jangan diulang"
+    },
+    {
+      "name": "Hunt Polkadot Bridge (full free)",
+      "status": "running",
+      "detail": "HackenProof • $1k–$100k • rep 80 (pas) • gratis • Rust/Substrate • KYC berat (ID + foto)"
     }
   ]
 }
