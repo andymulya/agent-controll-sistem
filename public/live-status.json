@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:08:32+07:00",
-  "updatedAtLabel": "15 Nov 2026, 23:08 WIB",
+  "updatedAt": "2026-11-15T23:22:52+07:00",
+  "updatedAtLabel": "15 Nov 2026, 23:22 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -13,8 +13,8 @@
       "models": 44
     },
     "iamhc": {
-      "status": "active",
-      "models": 25
+      "status": "unknown",
+      "models": null
     },
     "agentrouter": {
       "status": "active",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Cari program bounty baru",
-      "detail": "7 program baru lolos filter (verifikasi live): Paxos $1jt, Symbiotic $500k, Midas $500k, Agglayer $250k, Snowbridge $75k, KUB $5k, Whitechain $10k — antrean hunt berikutnya Paxos",
+      "detail": "Discovery part 2: 8 program LOLOS (rep ≤80 + gratis) — Cronos zkEVM (tanpa gate), SG Forge (tanpa gate), Bitexen, Flipcash, RISC Zero, Polkadot Bridge, EVAA, LiNEAR; BugRap: tidak ada program baru",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:19 WIB",
       "status": "done"
@@ -131,7 +131,7 @@
     {
       "name": "Cari program HackenProof rep ≤80",
       "status": "done",
-      "detail": "30 program dicek live — 2 lolos: Cronos (rep 50, gratis, s.d. $250k) + Whitechain Bridge (rep 50, gratis, s.d. $10k); Layer3 + Snowbridge butuh rep 100; tidak ada program gratis tanpa syarat reputasi"
+      "detail": "Discovery part 2: 8 program LOLOS (rep ≤80 + gratis) — Cronos zkEVM (tanpa gate), SG Forge (tanpa gate), Bitexen, Flipcash, RISC Zero, Polkadot Bridge, EVAA, LiNEAR; BugRap: tidak ada program baru"
     },
     {
       "name": "Hunt Cronos (full free)",
@@ -160,8 +160,18 @@
     },
     {
       "name": "Hunt Whitechain L1 (full free)",
+      "status": "done",
+      "detail": "HackenProof • s.d. $10.000 • STOP di STEP 0 — butuh rep 150, Andy 80 (gate tertinggi); butuh +70 total (1 Medium saja tidak cukup)"
+    },
+    {
+      "name": "Hunt Cronos zkEVM (full free)",
       "status": "running",
-      "detail": "HackenProof • s.d. $10.000 • rep ? (cek live STEP 0) • gratis • L1 chain"
+      "detail": "HackenProof • $500–$50.000 • tanpa gate reputasi • gratis • Solidity • 6 kontrak ter-deploy"
+    },
+    {
+      "name": "Hunt SG Forge (full free)",
+      "status": "running",
+      "detail": "HackenProof • $200–$10.000 • tanpa gate reputasi • gratis • tanpa KYC • stablecoin EURCV/USDCV"
     }
   ]
 }
