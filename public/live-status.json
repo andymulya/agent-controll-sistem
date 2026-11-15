@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T00:26:19+07:00",
-  "updatedAtLabel": "16 Nov 2026, 00:26 WIB",
+  "updatedAt": "2026-11-16T00:35:59+07:00",
+  "updatedAtLabel": "16 Nov 2026, 00:35 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -192,13 +192,13 @@
       "name": "Hunt RISC Zero zkVM (full free)",
       "status": "done",
       "detail": "HackenProof • $250–$150.000 • rep 50 • gratis • Rust zkVM • $68.250 sudah dibayar (pembayar terbesar)",
-      "note": "FINDING R-01 Critical — guest→kernel escape via unvalidated SHA/Poseidon2 ecall pointers, forged receipt verifies. Verified independently by Kendall (grind triple re-checked, ELF addresses, code links). Awaiting Andy's 'Ya kirim'."
+      "note": "FINDING R-01 Critical VERIFIED by Kendall (guest→kernel escape, forged receipt). Andy approved 'Ya kirim' 00:35 — BUT program PAUSED (verified live by Kendall 00:36: 'paused now' + Submit disabled + payload PAUSED). Filing BLOCKED until it reopens; draft + PoC saved, file immediately when active again."
     },
     {
       "name": "Hunt Meta #2 — open source (full free)",
       "status": "done",
       "detail": "bugbounty.meta.com • FINDING M-02 (Medium) TERVERIFIKASI: prompt-ops backend — traversal baca/tulis file + /api/settings bocor key penuh • PoC 5/7 PASS • dedup bersih • BELUM difile, nunggu Ya kirim Andy",
-      "note": "FINDING M-02 Medium verified. Filing IN PROGRESS via browser (Andy approved 'Ya kirim' 00:22). Note: Andy's Meta/Facebook account was locked by Meta security 00:19 — filing may block on login until he unlocks it."
+      "note": "FINDING M-02 Medium verified. FILING FAILED 16 Nov ~00:26: Meta site error 'Something went wrong' on 3 submit attempts (form + 2 attachments were complete; session still active, no Facebook login needed). NO report created, no duplicate risk. Filled form still open in browser tab for retry after Andy unlocks his Meta account / after a pause. Andy said 'Wait'."
     },
     {
       "name": "Hunt Polkadot Bridge (full free)",
@@ -217,8 +217,9 @@
     },
     {
       "name": "Discovery part 3 — HackenProof hal 21+ (full free, aktif)",
-      "status": "running",
-      "detail": "Cari program baru yang masih AKTIF (3 program part 2 ternyata PAUSED) • fokus HIGH/CRITICAL"
+      "status": "done",
+      "detail": "Cari program baru yang masih AKTIF (3 program part 2 ternyata PAUSED) • fokus HIGH/CRITICAL",
+      "note": "DONE 16 Nov ~00:35: 0 new submittable programs — all 131 programs on pages 21–34 PAUSED. Full directory scanned (332 slugs, 34 pages). Re-hunt triggers recorded (Dexalot $60.5k paid, DOP, Smardex, Router, Impermax, Ternoa, 0G Labs, Horizon...). Correction: SG Forge + Bitexen were ALREADY paused at hunt time; Flipcash paused now; Cronos zkEVM is the only part-2 pass still ACTIVE."
     }
   ]
 }
