@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T21:51:58+07:00",
-  "updatedAtLabel": "15 Nov 2026, 21:51 WIB",
+  "updatedAt": "2026-11-15T22:07:35+07:00",
+  "updatedAtLabel": "15 Nov 2026, 22:07 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -14,7 +14,7 @@
     },
     "iamhc": {
       "status": "active",
-      "models": 25
+      "models": 20
     },
     "agentrouter": {
       "status": "active",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Hunt Nado (full free)",
-      "detail": "HackenProof • $500.000 • FINDING C-01 Low (socializeSubaccount DBZ saat OI==0) — PoC 4/4 + live terverifikasi, menunggu \"Ya kirim\" Andy",
+      "detail": "HackenProof • FINDING C-01 Low — filing GAGAL: reputasi 100 dibutuhkan, Andy 80 — draft + PoC tersimpan; jalur: 1 laporan Medium Resolved di Cronos/Whitechain (+30) → 110",
       "owner": "Agen Bug (DeepSeek)",
       "startedAt": "15 Nov 2026, 20:29 WIB",
       "status": "done"
@@ -121,7 +121,7 @@
     {
       "name": "Hunt InitVerse (full free)",
       "status": "done",
-      "detail": "BugRap id 123 • $20.000 • FINDING C-01 Critical (seal check PoW di-comment di v1.0.4, snap-sync terima rantai palsu) — verifikasi independen Kendall: PoC 2 bagian re-run PASS + bisect v1.0.3 vs v1.0.4 terkonfirmasi + live chainId 7233 — menunggu \"Ya kirim\" Andy"
+      "detail": "BugRap id 123 • $20.000 • FINDING C-01 Critical FILED 22:06 (report ebc0eb10, Score 90, CWE-325, Pending) — PoC evidence PDF+PNG attached via comment"
     },
     {
       "name": "Hunt Bifrost (full free)",
