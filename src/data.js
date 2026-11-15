@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 17:57 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 17:57 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 18:01 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 18:01 WIB'
 
 export const headerStats = [
   {
@@ -86,6 +86,12 @@ export const statusAgents = [
     role: 'Agen aset 3D • sorceress.games',
     badge: { text: 'AKTIF', kind: 'badge-active' },
     text: 'Agen utama buat aset 3D game — Tripo v3.1, Meshy 7, auto-rig. Terhubung & teruji: 1 karakter cowok sudah jadi (45 kredit). Saldo tinggal 6 kredit — kalau habis, Kendall yang handle pakai jalur gratis.',
+  },
+  {
+    name: 'Xingchi API',
+    role: 'Gateway AI • api.xingchiapi.com',
+    badge: { text: 'AKTIF', kind: 'badge-active' },
+    text: 'Aktif & teruji lewat OpenCode: 2 model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Hanya klien coding yang diizinkan situsnya — script/SDK langsung ditolak, dan dsh tidak bisa karena jalurnya /v1/messages (ditolak grup key ini).',
   },
   {
     name: 'Kantor AI',
@@ -191,6 +197,20 @@ export const agents = [
     ],
     actions: [{ type: 'copy', text: 'Buatkan aset 3D buat Harvest Valley', label: 'Salin: Minta aset 3D', primary: false }],
     search: 'sorceress aset 3d tripo meshy rig game harvest valley',
+  },
+  {
+    name: 'Xingchi API',
+    role: 'api.xingchiapi.com • Gateway AI',
+    badge: { text: '● AKTIF', kind: 'badge-active' },
+    text: 'Gateway AI OpenAI-compatible — aktif & teruji lewat OpenCode: 2 model (gpt-6-astra, gpt-6.1-sol), chat dijawab benar. Batasan: chat langsung via script/SDK ditolak situsnya (403) — hanya klien coding yang diizinkan. Jalur dsh tidak bisa (dsh hanya bicara /v1/messages, ditolak grup key ini).',
+    meta: [
+      ['Model', 'gpt-6-astra, gpt-6.1-sol'],
+      ['Uji nyata', 'OpenCode ✓ • chat dijawab benar'],
+      ['Jalur', 'OpenCode 1.19.5'],
+      ['Aturan', 'Tanpa data sensitif'],
+    ],
+    actions: [{ type: 'copy', text: 'Cek status Xingchiapi', label: 'Salin: Cek status Xingchi', primary: false }],
+    search: 'xingchiapi gateway ai gpt-6 astra sol aktif opencode teruji',
   },
   {
     name: 'AgentRouter',
