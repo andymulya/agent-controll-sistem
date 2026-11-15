@@ -2,8 +2,8 @@
 // saat runtime, tidak ada secret, key, token, atau password.
 // Status per 15 Nov 2026 — hanya yang gratis yang tampil.
 
-export const STATUS_DATE = '15 Nov 2026 • 17:31 WIB'
-export const STATUS_FOOTER = '15 Nov 2026, 17:31 WIB'
+export const STATUS_DATE = '15 Nov 2026 • 17:35 WIB'
+export const STATUS_FOOTER = '15 Nov 2026, 17:35 WIB'
 
 export const headerStats = [
   {
@@ -241,6 +241,23 @@ export const agents = [
     ],
     actions: [{ type: 'copy', text: 'Cek status Xingchiapi', label: 'Salin: Cek status Xingchi', primary: false }],
     search: 'xingchiapi gateway ai gpt-6 astra sol terhubung dsh coding client',
+  },
+  {
+    name: 'AgentRouter',
+    role: 'agentrouter.org • Relay AI gratis',
+    badge: { text: '● AKTIF', kind: 'badge-active' },
+    text: 'Relay AI gratis (non-profit) buat coding tools — terhubung & teruji: 3 model (gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol), chat jalan lewat Responses API. Daftar pakai GitHub/LinuxDO, kredit gratis. Catatan: prompt harus bahasa Inggris (bukan Indonesia), model bisa datang-pergi.',
+    meta: [
+      ['Model', 'gpt-6.1-sol, gpt-6-astra, gpt-5.6-sol'],
+      ['Uji nyata', 'Responses ✓ (2+2 dijawab benar)'],
+      ['Prompt', 'Inggris saja'],
+      ['Kredit gratis', '$100 ($200 referral)'],
+    ],
+    actions: [
+      { type: 'copy', text: 'Cek status AgentRouter', label: 'Salin: Cek status AgentRouter', primary: false },
+      { type: 'link', href: 'https://agentrouter.org', label: 'Buka agentrouter.org ↗' },
+    ],
+    search: 'agentrouter relay ai gratis claude opus gpt-6 astra deepseek v4 github linuxdo',
   },
   {
     name: 'Gemini',
