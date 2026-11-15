@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T03:39:40+07:00",
-  "updatedAtLabel": "16 Nov 2026, 03:39 WIB",
+  "updatedAt": "2026-11-16T04:01:24+07:00",
+  "updatedAtLabel": "16 Nov 2026, 04:01 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -236,6 +236,16 @@
       "name": "Hunt Cronos Blockchain Protocols (full free)",
       "status": "done",
       "note": "DONE 16 Nov ~03:39: FINDING C-EIP712-PAYER FILED — HackenProof report CRONBP-532, status New, Medium, PoC attached. (PR #1153 caveat in report; payout $0 if Medium, $500-$20k if High accepted.)"
+    },
+    {
+      "name": "Discovery part 5 — cari program baru (full free)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~04:00 at Andy's word: re-scan HackenProof 332 slugs (flips paused→active) + BugRap + CodeHawks/Sherlock; only live + free + not paused + rep ≤80."
+    },
+    {
+      "name": "Hunt Meta AI / Muse live surface (tahap 1)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~04:00 at Andy's word: scope + reward tiers verified live, dedup, test plan with Andy's own test accounts only; no filing, no account creation; live probing via browser after plan lands."
     }
   ]
 }
