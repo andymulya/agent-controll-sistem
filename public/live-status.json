@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T05:27:21+07:00",
-  "updatedAtLabel": "16 Nov 2026, 05:27 WIB",
+  "updatedAt": "2026-11-16T05:32:33+07:00",
+  "updatedAtLabel": "16 Nov 2026, 05:32 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -275,7 +275,7 @@
     {
       "name": "Hunt Tapbit web (HackenProof)",
       "status": "done",
-      "note": "Fase 1 DONE 16 Nov ~05:26: NO-FIND — WAF blokir semua curl dari VM, probe live belum jalan; probe browser RUNNING (poc_public_api_browser.js di www.tapbit.com); 2 lead fase-2 (Affiliate IDOR L-1 Medium $2.000, signature binding L-2) butuh akun + API key Tapbit Andy (KYC) — keputusan Andy pending. Log hunt-log-TAPBIT-2026-11-16.md."
+      "note": "Fase 1 DONE 16 Nov ~05:26: NO-FIND — WAF blokir semua curl dari VM; probe browser FAILED 05:32 (www.tapbit.com 403 di semua rute, cloud browser juga diblokir — hanya browser Andy sendiri yang bisa jalanin probe, skrip dikirim ke Andy); 2 lead fase-2 (Affiliate IDOR L-1 Medium $2.000, signature binding L-2) butuh akun + API key Tapbit Andy (KYC) — link dikirim 05:28, keputusan Andy pending. Log hunt-log-TAPBIT-2026-11-16.md."
     }
   ]
 }
