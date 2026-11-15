@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T05:35:55+07:00",
-  "updatedAtLabel": "16 Nov 2026, 05:35 WIB",
+  "updatedAt": "2026-11-16T05:37:24+07:00",
+  "updatedAtLabel": "16 Nov 2026, 05:37 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -276,6 +276,11 @@
       "name": "Akun Intigriti",
       "status": "done",
       "note": "DONE 16 Nov ~05:35: akun researcher andymulya TERBUAT + login terverifikasi (Andy login sendiri saat takeover, 2FA di-skip 'Skip for now', tidak diaktifkan); onboarding level pengalaman (Beginner/Intermediate/Legend) belum dipilih — Andy-side; status verifikasi email belum dipastikan, cek inbox andymulya13@gmail.com."
+    },
+    {
+      "name": "Hunt NVIDIA (Intigriti)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~05:37 at Andy's 'lanjut': Container Toolkit + CUDA Toolkit (repo publik), kelas local priv-esc/container escape; Med $2.000 flat / High $4.000 / Crit $15.000; akun Intigriti andymulya sudah jadi + login terverifikasi; STEP 0 live di awal hunt."
     }
   ]
 }
