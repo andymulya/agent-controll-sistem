@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T04:34:48+07:00",
-  "updatedAtLabel": "16 Nov 2026, 04:34 WIB",
+  "updatedAt": "2026-11-16T04:54:21+07:00",
+  "updatedAtLabel": "16 Nov 2026, 04:54 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -256,6 +256,11 @@
       "name": "Next hunt — keputusan Andy",
       "status": "pending",
       "note": "PENDING Andy: (a) fee $5–$7 NEAR Intents SC / account-abstraction-bugs (Med berbayar tertinggi), (b) web gratis tapbit → synfutures → whitebit, (c) Meta live probing (butuh 2 test account)."
+    },
+    {
+      "name": "Discovery part 6 — gratis + ga butuh akun",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~04:54 at Andy's word: HackerOne + Intigriti (baru) + verifikasi Meta OSS 'belum tersentuh' vs log hunt #2/#3 + fase unauthenticated web survivors; kriteria: fee $0 + audit tanpa akun target; ranking EV Medium–Critical."
     }
   ]
 }
