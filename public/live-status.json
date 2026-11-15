@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T05:32:33+07:00",
-  "updatedAtLabel": "16 Nov 2026, 05:32 WIB",
+  "updatedAt": "2026-11-16T05:35:55+07:00",
+  "updatedAtLabel": "16 Nov 2026, 05:35 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -268,14 +268,14 @@
       "note": "RUNNING 16 Nov ~05:14: signup browser (andymulya / andymulya13@gmail.com); password via secure entry; KYC Andy-side (pending)."
     },
     {
-      "name": "Akun Intigriti",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~05:14: signup browser (andymulya / andymulya13@gmail.com); password via secure entry."
-    },
-    {
       "name": "Hunt Tapbit web (HackenProof)",
       "status": "done",
       "note": "Fase 1 DONE 16 Nov ~05:26: NO-FIND — WAF blokir semua curl dari VM; probe browser FAILED 05:32 (www.tapbit.com 403 di semua rute, cloud browser juga diblokir — hanya browser Andy sendiri yang bisa jalanin probe, skrip dikirim ke Andy); 2 lead fase-2 (Affiliate IDOR L-1 Medium $2.000, signature binding L-2) butuh akun + API key Tapbit Andy (KYC) — link dikirim 05:28, keputusan Andy pending. Log hunt-log-TAPBIT-2026-11-16.md."
+    },
+    {
+      "name": "Akun Intigriti",
+      "status": "done",
+      "note": "DONE 16 Nov ~05:35: akun researcher andymulya TERBUAT + login terverifikasi (Andy login sendiri saat takeover, 2FA di-skip 'Skip for now', tidak diaktifkan); onboarding level pengalaman (Beginner/Intermediate/Legend) belum dipilih — Andy-side; status verifikasi email belum dipastikan, cek inbox andymulya13@gmail.com."
     }
   ]
 }
