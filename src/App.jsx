@@ -73,9 +73,9 @@ function useLiveStatus() {
       if (!document.hidden) load()
     }
     load()
-    // Poll the live file: every new push (task started/finished, credits
-    // changed) reaches the screen by setState, no browser refresh needed.
-    const timer = setInterval(load, 30000)
+    // Poll the live file every 5 minutes: every new push (task started/finished,
+    // credits changed) reaches the screen by setState, no browser refresh needed.
+    const timer = setInterval(load, 300000)
     document.addEventListener('visibilitychange', onVisible)
     return () => {
       cancelled = true
