@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:48:14+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:48 WIB",
+  "updatedAt": "2026-11-16T07:50:46+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:50 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -329,8 +329,8 @@
     },
     {
       "name": "Hunt Infomaniak (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:33 at Andy's 'Gas' (ganti E-Voting yang NO-FIND): web + API, 58 scopes, fase unauthenticated dulu; Med €300–€600 / Crit up to €7.000, cost 2 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:49, NO-FIND fase 1 unauthenticated (log hunt-log-INFOMANIAK-2026-11-16.md, 23.272 bytes, §0–§6, Kendall verified file + §0–§2): STEP 0 live ACTIVE, cost 2 credits, 4.557 laporan (+1 dari part 6; 72 laporan/24 jam — risiko duplikat TINGGI); Med 300–600 euro / High 1.500–2.000 euro / Crit 3.500–7.000 euro (critical-scope). 20 kandidat dibunuh dengan bukti live (login + API + WebDAV + S3 auth seragam 401/404; semua refleksi ter-encode/di-strip; OAuth /authorize menolak redirect_uri tak bertanda tangan 400, flow JWT r HS256 + PKCE S256; CORS tidak merefleksikan Origin; tidak ada .git/.env; cache privat; Host spoof ditutup server). Dedup: 2 CVE plugin WordPress VOD Infomaniak sudah fixed + publik = duplikat, asetnya bukan aset YWH; class signal: writeup Ahmex00 org/role ID serial → roleless → eskalasi OrgAdmin (target TIDAK dinamai — pola cocok dengan Infomaniak Manager, dicatat sebagai lead fase 2, BUKAN bukti). Program secara eksplisit mengundang self-registration GRATIS (alias YWH *@yeswehack.ninja) — fase 2 layak jalan, butuh akun test-env Andy + akun kedua. Lead fase 2: L-1 (TERKUAT) Manager v3 org/role IDOR + priv-esc (invite user role kustom lalu hapus role → roleless → beri OrgAdmin oleh akun berhak rendah; edit user lintas-org; mass assignment edit-user), L-2 chk shortener SSRF, L-3 kDrive/Mail/Calendar/Contacts BOLA + sharing, L-4 SwissTransfer lintas-akun, L-5 Challenges +50% first-report (Node.js Hosting #6 + Managed Kubernetes #5, free trial tersedia), L-6 OAuth/login pasca-login, L-7 Euria AI lintas-user, L-8 OnlyOffice via kDrive, L-9 Shop cross-org + ticketing. Catatan kredit: Infomaniak hanya cost 2 — filing di sini murah; saldo Andy 10."
     },
     {
       "name": "Hunt Tencent (YesWeHack)",
@@ -351,6 +351,11 @@
       "name": "Hunt SynFutures dApp (HackenProof)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:47 at Andy's 'Gas' (ganti Tencent yang NO-FIND; daftar gratis + tanpa akun target part 6 HABIS — ini kandidat web gratis berikutnya dari part 5): web-only oyster.synfutures.com, rep 80 (persis Andy), FREE, KYC+PoC; Med $500–$2.000 / Crit $5.000–$10.000, $2.600 paid; STEP 0 sudah diverifikasi live 16 Nov ~03:52 (active, free, rep 80); target High–Critical."
+    },
+    {
+      "name": "Hunt Whitebit (HackenProof)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:50 at Andy's 'Gas' (ganti Infomaniak yang NO-FIND fase 1): web + API, fase unauthenticated dulu; rep 50, FREE, Med $300–$500 / Crit $2.000–$10.000, $38.401 paid; target High–Critical."
     }
   ]
 }
