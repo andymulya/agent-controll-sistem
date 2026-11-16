@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:17:51+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:17 WIB",
+  "updatedAt": "2026-11-16T07:22:29+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:22 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -294,8 +294,8 @@
     },
     {
       "name": "Hunt YWH platform (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:09 at Andy's 'lanjut semua' (ganti Adobe yang NO-FIND): platform YesWeHack sendiri — web + API publik, fase unauthenticated dulu; Med €1.500 / High €5.000 / Crit €15.000, cost HANYA 1 credit; filing butuh KYC Andy (belum dilakukan)."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:17: NO-FIND fase unauthenticated (log hunt-log-YWH-PLATFORM-2026-11-16.md). STEP 0 live: ACTIVE, cost 1 credit, scope yeswehack.com + api.yeswehack.com + apps.yeswehack.com (CRITICAL). 26 kandidat dibunuh (17 endpoint sensitif 401 JWT Token not found; ranking/versions publik by design; CORS tanpa ACAO; SQLi byte-identik; XSS hanya di meta og:url percent-encoded; cache no-store/no-cache; .git/.env 404; SSRF 0 endpoint GET di OpenAPI). Fase 2 AUTHENTICATED tidak dieksekusi (butuh sesi/JWT hunter andymulya via browser Kendall — IDOR laporan, JWT attacks, mass assignment, stored XSS draft, CSRF, priv-esc hunter→manager)."
     },
     {
       "name": "Hunt E-Voting (YesWeHack)",
@@ -311,6 +311,11 @@
       "name": "make.fun: markdown-render-speed-02 builder",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:16 (watch 06:39): 'Make Markdown rendering faster (marked 18.1.3)', $250, GRATIS, 38 subs, tutup 17 Nov 03:30 WIB; builder Agen Coding (dependency-free JS)."
+    },
+    {
+      "name": "Hunt Lightspark (Intigriti)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:22 at Andy's 'lanjut semua' (ganti YWH-platform yang NO-FIND): repo buildonspark/spark + 4 web app Tier 1; Med $750 / High $2.000 / Crit $5.000; Tier 2 sandbox $0 JANGAN dihunt; target High–Critical."
     }
   ]
 }
