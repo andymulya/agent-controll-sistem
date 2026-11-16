@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:27:07+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:27 WIB",
+  "updatedAt": "2026-11-16T07:33:49+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:33 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -299,8 +299,8 @@
     },
     {
       "name": "Hunt E-Voting (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:11 at Andy's 'Lanjut cari' (paralel Kiteworks + YWH-platform): Swiss Post E-Voting — audit source code GitLab publik; Med €2.000–€50.000 / High €5.000–€70.000 / Crit €10.000–€230.000, cost 10 credits (saldo Andy persis 10 — filing menghabiskan semua kredit + butuh KYC Andy yang belum dilakukan; fase ini AUDIT SAJA)."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:27, NO-FIND (log hunt-log-EVOTING-2026-11-16.md, 28.331 bytes, §0–§4, Kendall verified file + §0–§2): audit source GitLab publik, fokus High/Critical; 11 jalur dibunuh (semua fix terverifikasi hadir di v1.6.2/1.6.2.1: Miller-Rabin YWH-374, signature upload YWH-744, context/ID YWH-1732, cache YWH-1597, mixnet/tally, Java/TS divergence spot-check). Lead terkuat C-VCM (Voting Card Manager API tanpa auth, x-tenant-id saja; enumerasi kartu + PUT blockVotingCard tanpa unblock) DIBUNUH dengan 2 bukti: probe live demo.evoting.ch GET-only 403 dari reverse proxy Apache + whitepaper mendokumentasikan mTLS 2-way di access layer. Tidak ada Medium valid, tidak ada yang difile. Residual: C-VCM defense-in-depth (hanya temuan bila bypass live terbukti), sweep divergensi Java/TS spot-check saja, issue 2.0 #5 (spec-review, bukan flaw)."
     },
     {
       "name": "make.fun: ai-excited-01 builder",
@@ -326,6 +326,11 @@
       "name": "Hunt TeamViewer (YesWeHack)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:26 at Andy's 'Gas' (ganti Kiteworks yang NO-FIND fase 1): web + binary downloadable, fase unauthenticated dulu; Med €500–€1.000 / High €2.000–€4.000 / Crit €5.000–€10.000, cost 5 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+    },
+    {
+      "name": "Hunt Infomaniak (YesWeHack)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:33 at Andy's 'Gas' (ganti E-Voting yang NO-FIND): web + API, 58 scopes, fase unauthenticated dulu; Med €300–€600 / Crit up to €7.000, cost 2 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
     }
   ]
 }
