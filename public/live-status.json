@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T14:33:08+07:00",
-  "updatedAtLabel": "16 Nov 2026, 14:33 WIB",
+  "updatedAt": "2026-11-16T15:03:13+07:00",
+  "updatedAtLabel": "16 Nov 2026, 15:03 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -21,8 +21,8 @@
       "models": 3
     },
     "xingchi": {
-      "status": "unknown",
-      "models": null
+      "status": "active",
+      "models": 2
     }
   },
   "pollinations": {
