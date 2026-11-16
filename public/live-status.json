@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T08:06:08+07:00",
-  "updatedAtLabel": "16 Nov 2026, 08:06 WIB",
+  "updatedAt": "2026-11-16T08:22:35+07:00",
+  "updatedAtLabel": "16 Nov 2026, 08:22 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -339,18 +339,18 @@
     },
     {
       "name": "Hunt DANA (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:40 at Andy's 'Gas' (ganti TeamViewer yang NO-FIND): web + API, target Indonesia, fase unauthenticated dulu; Med 700 euro / Crit 3.000 euro; cost credits verifikasi live di STEP 0; fase penuh mungkin butuh nomor HP Indonesia di fase 2 — fase ini read-only; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~08:22: NO-FIND fase 1 unauthenticated (log hunt-log-DANA-2026-11-16.md). STEP 0 live: ACTIVE, cost 3 credits, Low 300 / Med 700 / High 2.000 / Crit 3.000 euro. 12 kandidat dibunuh (m.dana.id 36 path semua 404 kecuali /m shell H5; mgs-gw drop koneksi total dari VM; APK tidak diperoleh). Fase 2 butuh nomor HP Indonesia + akun DANA Andy (OTP/PIN flows, Special Case s/d $5.000)."
     },
     {
       "name": "Hunt Meta OSS llama3 + llama-stack-ops",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:46 at Andy's 'Gas' (ganti OVH yang NO-FIND): repo meta-llama/llama3 + llama-stack-ops — dua repo Meta yang benar-benar BELUM diaudit (8 repo lain sudah diaudit di hunt #2/#3, jangan ulang); target High–Critical (pattern OSS Meta sejauh ini Low — bila hanya Low, catat, jangan draft filing tanpa keputusan Kendall); filing butuh 'Ya kirim' Andy per laporan."
+      "status": "done",
+      "note": "DONE 16 Nov ~08:22: NO-FIND (log hunt-log-META-OSS-2026-11-16.md). Kedua repo diaudit penuh, 14 kandidat dibunuh, nol fileable bahkan Low. llama3-site tidak ada (404); llama-stack-ops semua workflow maintainer-only. Re-hunt hanya bila ada komponen server/API baru atau workflow jadi pull_request_target."
     },
     {
       "name": "Hunt SynFutures dApp (HackenProof)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:47 at Andy's 'Gas' (ganti Tencent yang NO-FIND; daftar gratis + tanpa akun target part 6 HABIS — ini kandidat web gratis berikutnya dari part 5): web-only oyster.synfutures.com, rep 80 (persis Andy), FREE, KYC+PoC; Med $500–$2.000 / Crit $5.000–$10.000, $2.600 paid; STEP 0 sudah diverifikasi live 16 Nov ~03:52 (active, free, rep 80); target High–Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~08:22: NO-FIND fase unauthenticated (log hunt-log-SYNFUTURES-2026-11-16.md). STEP 0 live: ACTIVE, FREE, rep 80 persis gate, Med $500-2.000 / Crit $5.000-10.000. 120 probe, 13 kandidat dibunuh (signer client-side forgeable tapi data publik; BOLA tanpa PII; XSS/DOMPurify; RWA JWT-gated). Fase 2 butuh akun tes + browser (1CT login, share upload, MM JWT)."
     },
     {
       "name": "Hunt Whitebit (HackenProof)",
@@ -359,8 +359,8 @@
     },
     {
       "name": "Discovery Intigriti",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~08:05 at Andy: cari program bug bounty baru di Intigriti. Daftar publik live 24 program: NVIDIA + Adobe DONE NO-FIND, Lightspark DONE NO-FIND fase 1, Dropbox SUSPENDED. Kandidat baru dicek STEP 0: Intigriti self, ADAC (Application Required), Daytona (2FA + Application Required). Target High-Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~08:15: discovery + STEP 0 selesai (file intigriti-discovery-2026-11-16.md). 24 program publik, 18 VDP tanpa bounty. Top 3 baru: #1 intigriti-self max 13.337 euro (butuh VPN config Andy), #2 Intergamma max 5.500 euro (langsung jalan, tanpa Andy), #3 Wolt max 3.500 euro. Menunggu pilihan Andy."
     }
   ]
 }
