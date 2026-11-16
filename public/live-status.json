@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T11:55:55+07:00",
-  "updatedAtLabel": "16 Nov 2026, 11:55 WIB",
+  "updatedAt": "2026-11-16T12:08:06+07:00",
+  "updatedAtLabel": "16 Nov 2026, 12:08 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -14,7 +14,7 @@
     },
     "iamhc": {
       "status": "active",
-      "models": 24
+      "models": 19
     },
     "agentrouter": {
       "status": "active",
