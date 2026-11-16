@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T11:43:56+07:00",
-  "updatedAtLabel": "16 Nov 2026, 11:43 WIB",
+  "updatedAt": "2026-11-16T11:45:08+07:00",
+  "updatedAtLabel": "16 Nov 2026, 11:45 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -375,7 +375,7 @@
       "owner": "Kendall",
       "startedAt": "16 Nov 2026, 09:33 WIB",
       "status": "running",
-      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNTS NO-FIND fase 1 (12): Intergamma (12 dibunuh; Vercel 429), Wolt (11), Mon Espace Sante (14; 7 subdomain tutup koneksi), Telenor (13; fase 2 BankID), Paddle (15), Louis Vuitton (BLOCKED Akamai 403), Maya (15; payoutapi tak terjangkau), Cryptobox (12; 3 CVE dibunuh), Outscale (9; Cockpit tak terjangkau), Swiss Post main (13; 1.470 subdomain, 0 takeover), Google VRP web (11; tanpa block), MSRC M365 web (5 dibunuh + 3 inconclusive; fase 2 butuh akun MSOBB). HUNT HUNTR RUNNING (audit kode OSS AI/ML, OSV ~$1.500 / MFV s.d. $4k+)."
+      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNTS NO-FIND fase 1 (13): Intergamma (12 dibunuh; Vercel 429), Wolt (11), Mon Espace Sante (14; 7 subdomain tutup koneksi), Telenor (13; fase 2 BankID), Paddle (15), Louis Vuitton (BLOCKED Akamai 403), Maya (15; payoutapi tak terjangkau), Cryptobox (12; 3 CVE dibunuh), Outscale (9; Cockpit tak terjangkau), Swiss Post main (13; 1.470 subdomain, 0 takeover), Google VRP web (11; tanpa block), MSRC M365 web (5 dibunuh + 3 inconclusive), huntr STOP STEP 0 (program OSV MATI 30 Jun 2026 — challenge-only). HUNT PATCHSTACK RUNNING (audit plugin WordPress, zeroday s.d. $33k)."
     }
   ]
 }
