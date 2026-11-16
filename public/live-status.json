@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T10:00:42+07:00",
-  "updatedAtLabel": "16 Nov 2026, 10:00 WIB",
+  "updatedAt": "2026-11-16T10:11:19+07:00",
+  "updatedAtLabel": "16 Nov 2026, 10:11 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -375,7 +375,7 @@
       "owner": "Kendall",
       "startedAt": "16 Nov 2026, 09:33 WIB",
       "status": "running",
-      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNT INTERGAMMA DONE ~10:10 NO-FIND fase 1 (log hunt-log-INTERGAMMA-2026-11-16.md; 12 kandidat dibunuh; storefront diblokir Vercel checkpoint 429 dari VM — fase 2 butuh browser/IP Andy). HUNT WOLT RUNNING (fase unauthenticated, Intigriti max 3.500 euro)."
+      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNT INTERGAMMA DONE ~10:10 NO-FIND fase 1 (12 kandidat dibunuh; storefront diblokir Vercel 429 dari VM). HUNT WOLT DONE ~10:18 NO-FIND fase 1 (log hunt-log-WOLT-2026-11-16.md; 11 kandidat dibunuh; scope *.wolt.com Tier 2 terkonfirmasi; fase 2 butuh akun @intigriti.me). HUNT MON ESPACE SANTE RUNNING (YWH, max 8.000 euro, fase unauthenticated)."
     }
   ]
 }
