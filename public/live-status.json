@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T10:46:05+07:00",
-  "updatedAtLabel": "16 Nov 2026, 10:46 WIB",
+  "updatedAt": "2026-11-16T10:53:17+07:00",
+  "updatedAtLabel": "16 Nov 2026, 10:53 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -375,7 +375,7 @@
       "owner": "Kendall",
       "startedAt": "16 Nov 2026, 09:33 WIB",
       "status": "running",
-      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNT INTERGAMMA DONE ~10:10 NO-FIND (12 dibunuh; storefront diblokir Vercel 429 dari VM). HUNT WOLT DONE ~10:18 NO-FIND (11 dibunuh). HUNT MON ESPACE SANTE DONE ~10:20 NO-FIND (14 dibunuh; 7 subdomain tutup koneksi dari VM). HUNT TELENOR DONE ~10:27 NO-FIND (13 dibunuh; fase 2 butuh BankID Swedia). HUNT PADDLE DONE ~10:42 NO-FIND (15 dibunuh). HUNT LOUIS VUITTON DONE ~10:46 NO-FIND fase 1 BLOCKED (Akamai 403 semua host dari VM — belum teruji; butuh browser/IP Andy). HUNT MAYA RUNNING (YWH, max $5.000, fase unauthenticated)."
+      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNT INTERGAMMA DONE ~10:10 NO-FIND (12 dibunuh; storefront diblokir Vercel 429 dari VM). HUNT WOLT DONE ~10:18 NO-FIND (11 dibunuh). HUNT MON ESPACE SANTE DONE ~10:20 NO-FIND (14 dibunuh; 7 subdomain tutup koneksi dari VM). HUNT TELENOR DONE ~10:27 NO-FIND (13 dibunuh; fase 2 butuh BankID Swedia). HUNT PADDLE DONE ~10:42 NO-FIND (15 dibunuh). HUNT LOUIS VUITTON DONE ~10:46 NO-FIND fase 1 BLOCKED (Akamai 403 semua host dari VM). HUNT MAYA DONE ~10:53 NO-FIND (15 dibunuh; payoutapi tak terjangkau dari VM). HUNT CRYPTOBOX RUNNING (YWH, max 5.000 euro, fase unauthenticated)."
     }
   ]
 }
