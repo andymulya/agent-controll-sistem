@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:38:06+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:38 WIB",
+  "updatedAt": "2026-11-16T07:40:59+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:40 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -324,8 +324,8 @@
     },
     {
       "name": "Hunt TeamViewer (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:26 at Andy's 'Gas' (ganti Kiteworks yang NO-FIND fase 1): web + binary downloadable, fase unauthenticated dulu; Med €500–€1.000 / High €2.000–€4.000 / Crit €5.000–€10.000, cost 5 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:40, NO-FIND (log hunt-log-TEAMVIEWER-2026-11-16.md, 7.596 bytes, Kendall verified file + §0–§3): STEP 0 live ACTIVE, cost 5 credits, reports_count 1.047 (risiko duplikat privat tinggi); Crit 10.000 euro / High 4.000 euro (scope CRITICAL), Crit 5.000 euro / High 2.000 euro (scope HIGH). Scope: web.teamviewer.com, account.teamviewer.com, login.teamviewer.com, halaman download + 5 mobile app. Dedup: 69 CVE — hampir semua DEX (out of scope) atau desktop-client binary yang sudah di-patch di 15.82/15.83. 17 kandidat dibunuh dengan bukti live (GET-only, ~60 request ber-pacing): open redirect redirect_uri/ReturnUrl/redirecturl/postlogoutredirecturi (allowlist ketat + guard eksplisit di kode), reflected XSS 0 refleksi, /api/* web 404 semua, host API internal NXDOMAIN, CORS tanpa ACAO / ACAO * tanpa credentials, .git/.env 403/BadRequest, path traversal download 302/403, GraphQL introspection 403, feedbackservice .cmd 404, Sentry DSN + Pendo key = analytics publik non-qualifying, enumeration/rate-limit/session = non-qualifying. Tidak ada PoC, tidak ada draft. Lead fase 2 (butuh akun tes Andy): L-1 OAuth authorize client_id nyata, L-2 IDOR/BOLA /api/* setelah auth, L-3 host-header poisoning password reset, L-4 token reset binding, L-5 stored XSS feedbackservice (perlu konfirmasi scope), L-6 prefill ?email= di /Register, L-7 alur SSO."
     },
     {
       "name": "Hunt Infomaniak (YesWeHack)",
@@ -336,6 +336,11 @@
       "name": "Hunt Tencent (YesWeHack)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:37 at Andy's 'Gas' (ganti Lightspark yang NO-FIND): web + API, fase unauthenticated dulu; Med €50–€100, cost 0 credits — CREDIT-EARNER (laporan valid menambah kredit untuk filing program lain); target High–Critical, Medium valid tetap berharga di sini."
+    },
+    {
+      "name": "Hunt DANA (YesWeHack)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:40 at Andy's 'Gas' (ganti TeamViewer yang NO-FIND): web + API, target Indonesia, fase unauthenticated dulu; Med 700 euro / Crit 3.000 euro; cost credits verifikasi live di STEP 0; fase penuh mungkin butuh nomor HP Indonesia di fase 2 — fase ini read-only; filing butuh KYC Andy (belum dilakukan); target High–Critical."
     }
   ]
 }
