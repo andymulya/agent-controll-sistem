@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T05:46:26+07:00",
-  "updatedAtLabel": "16 Nov 2026, 05:46 WIB",
+  "updatedAt": "2026-11-16T06:14:43+07:00",
+  "updatedAtLabel": "16 Nov 2026, 06:14 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -269,8 +269,8 @@
     },
     {
       "name": "Hunt Tapbit web (HackenProof)",
-      "status": "paused",
-      "note": "DIJEDA 16 Nov ~05:46 at Andy's 'Tapbit jeda dulu sampai aku bilang lanjutin' — fase 1 DONE NO-FIND (WAF blokir semua curl + probe browser 403); 2 lead fase-2 (Affiliate IDOR L-1 Medium $2.000, signature binding L-2) butuh akun + API key Tapbit Andy (KYC); JANGAN lanjut sampai Andy bilang lanjutin."
+      "status": "running",
+      "note": "DILANJUT LAGI 16 Nov ~05:47 at Andy's 'Oke lanjutin semua' (jeda 05:46 dibatalkan): fase 1 DONE NO-FIND (WAF blokir semua curl + probe browser 403); fase 2 (Affiliate IDOR L-1 Medium $2.000, signature binding L-2) menunggu akun + API key Tapbit Andy (KYC)."
     },
     {
       "name": "Akun Intigriti",
@@ -279,8 +279,13 @@
     },
     {
       "name": "Hunt NVIDIA (Intigriti)",
+      "status": "done",
+      "note": "DONE 16 Nov ~06:12: NO-FIND (log hunt-log-NVIDIA-2026-11-16.md). STEP 0 live: ACTIVE, FREE, tanpa rep gate, tanpa KYC. Repo nvidia-container-toolkit v1.20.2 (adbd28c3): 10 kandidat dibunuh dengan bukti (K-01 prestart hook env, K-02 CDI hooks, K-03/04 symlinks+chmod, K-05 update-ldcache, K-06 profile hooks, K-07 VISIBLE_DEVICES gate, K-08 cuda-memory-limits, K-09 do_path_resolve); 10 CVE lama semua sudah fix; go test 31 pkg ok (1 fail = umask VM, bukan bug); PoC runc hook-env tidak bisa jalan di VM (tanpa GPU/docker, seccomp blokir setns) — diselesaikan dari source runc/crun verbatim; CUDA Toolkit binary-only, tidak diaudit."
+    },
+    {
+      "name": "Hunt Adobe (Intigriti)",
       "status": "running",
-      "note": "RUNNING 16 Nov ~05:37 at Andy's 'lanjut': Container Toolkit + CUDA Toolkit (repo publik), kelas local priv-esc/container escape; Med $2.000 flat / High $4.000 / Crit $15.000; akun Intigriti andymulya sudah jadi + login terverifikasi; STEP 0 live di awal hunt."
+      "note": "RUNNING 16 Nov ~05:47 at Andy's 'lanjut semua' (paralel dengan NVIDIA): web scope, fase unauthenticated dulu; Med $300-$1.500 / High $1.500-$7.500 / Crit $7.500-$10.000; STEP 0 live + enumerasi scope di awal hunt."
     }
   ]
 }
