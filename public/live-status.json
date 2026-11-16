@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:46:47+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:46 WIB",
+  "updatedAt": "2026-11-16T07:48:14+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:48 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -334,8 +334,8 @@
     },
     {
       "name": "Hunt Tencent (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:37 at Andy's 'Gas' (ganti Lightspark yang NO-FIND): web + API, fase unauthenticated dulu; Med €50–€100, cost 0 credits — CREDIT-EARNER (laporan valid menambah kredit untuk filing program lain); target High–Critical, Medium valid tetap berharga di sini."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:47, NO-FIND fase 1 unauthenticated (log hunt-log-TENCENT-2026-11-16.md, 17.457 bytes, §0–§6, Kendall verified file + §0): STEP 0 live ACTIVE, cost 0 credits, 15 laporan di YWH, hacktivity false. KOREKSI vs part 6: reward dalam USD, bukan EUR — grid MEDIUM-scope Low $20 / Med $50 / High $400 / Crit $1.200; CRITICAL-scope Low $30 / Med $100 / High $600 / Crit $5.000. 13 kandidat dibunuh dengan bukti live (TSRC reflected param hanya percent-encoded + payload 501 WAF; TSRC OAuth redirect_uri hardcoded ke index.php/sign/google_cb; QQ Music API data publik by design, tanpa ACAO; .git/.env 501/566 WAF/404; SQLi WAF 501; SSRF — tidak ada parameter URL-fetch di permukaan unauthenticated). Dedup bersih (WeWorm patched 21 Agu 2026, Sogou CVE patched + out of scope, WeKnora SSRF bukan layanan Tencent, RapidJSON/OpenClaw pihak ketiga). CATATAN FILING PENTING: laporan program ini TIDAK disubmit lewat YesWeHack — laporan dikirim via TSRC (en.security.tencent.com/index.php/report/add), lalu di-import ke YWH dan di-claim dengan email yang sama di kedua platform; KYC wajib untuk payout; report/add sudah dikonfirmasi login-gated. Fase 2 butuh akun QQ atau WeChat (keputusan Andy): L-1 Yuanbao web (prompt injection → data pengguna lain, IDOR conversation/share link, SSRF import-by-URL, file upload) → L-2 Doc.qq.com (shared-doc IDOR) → L-3 QQ Music API BOLA → L-4 Tencent Video API → L-5 WeCom/Exmail → L-6 TSRC sendiri (IDOR laporan, CSRF) → L-7 Mini Program framework API → L-8 Tencent Cloud console (IP customer OUT)."
     },
     {
       "name": "Hunt DANA (YesWeHack)",
@@ -346,6 +346,11 @@
       "name": "Hunt Meta OSS llama3 + llama-stack-ops",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:46 at Andy's 'Gas' (ganti OVH yang NO-FIND): repo meta-llama/llama3 + llama-stack-ops — dua repo Meta yang benar-benar BELUM diaudit (8 repo lain sudah diaudit di hunt #2/#3, jangan ulang); target High–Critical (pattern OSS Meta sejauh ini Low — bila hanya Low, catat, jangan draft filing tanpa keputusan Kendall); filing butuh 'Ya kirim' Andy per laporan."
+    },
+    {
+      "name": "Hunt SynFutures dApp (HackenProof)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:47 at Andy's 'Gas' (ganti Tencent yang NO-FIND; daftar gratis + tanpa akun target part 6 HABIS — ini kandidat web gratis berikutnya dari part 5): web-only oyster.synfutures.com, rep 80 (persis Andy), FREE, KYC+PoC; Med $500–$2.000 / Crit $5.000–$10.000, $2.600 paid; STEP 0 sudah diverifikasi live 16 Nov ~03:52 (active, free, rep 80); target High–Critical."
     }
   ]
 }
