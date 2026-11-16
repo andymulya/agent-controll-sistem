@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T08:46:04+07:00",
-  "updatedAtLabel": "16 Nov 2026, 08:46 WIB",
+  "updatedAt": "2026-11-16T09:34:18+07:00",
+  "updatedAtLabel": "16 Nov 2026, 09:34 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -368,6 +368,13 @@
       "owner": "Kendall",
       "startedAt": "16 Nov 2026, 08:33 WIB",
       "status": "done"
+    },
+    {
+      "name": "Sweep semua platform + hunt Intergamma",
+      "detail": "Andy 09:33: cari lagi program bug bounty di semua platform. Sweep Bugcrowd/HackenProof/YWH/Intigriti/BugRap/Sherlock/CodeHawks/HackerOne + VRP lain, lalu hunt Intergamma (Intigriti, max €5.500) fase unauthenticated.",
+      "owner": "Kendall",
+      "startedAt": "16 Nov 2026, 09:33 WIB",
+      "status": "running"
     }
   ]
 }
