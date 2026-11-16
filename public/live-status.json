@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T09:55:49+07:00",
-  "updatedAtLabel": "16 Nov 2026, 09:55 WIB",
+  "updatedAt": "2026-11-16T10:00:42+07:00",
+  "updatedAtLabel": "16 Nov 2026, 10:00 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -370,12 +370,12 @@
       "status": "done"
     },
     {
-      "name": "Sweep semua platform + hunt Intergamma",
+      "name": "Sweep semua platform + hunt Intergamma/Wolt",
       "detail": "Andy 09:33: cari lagi program bug bounty di semua platform. Sweep Bugcrowd/HackenProof/YWH/Intigriti/BugRap/Sherlock/CodeHawks/HackerOne + VRP lain, lalu hunt Intergamma (Intigriti, max €5.500) fase unauthenticated.",
       "owner": "Kendall",
       "startedAt": "16 Nov 2026, 09:33 WIB",
       "status": "running",
-      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru di semua platform (Bugcrowd 296 unchanged, HackenProof 331, YWH 52, Intigriti marketing 23, BugRap list kini butuh auth, Sherlock/CodeHawks 0 live; VRP baru Polandia NASK terblokir PESEL). Discovery: all-platforms-discovery-2026-11-16.md. HUNT INTERGAMMA RUNNING (fase unauthenticated, Intigriti max 5.500 euro)."
+      "note": "SWEEP DONE 16 Nov ~10:05: 0 program baru (Bugcrowd 296, HackenProof 331, YWH 52, Intigriti 23, BugRap list butuh auth; discovery all-platforms-discovery-2026-11-16.md). HUNT INTERGAMMA DONE ~10:10 NO-FIND fase 1 (log hunt-log-INTERGAMMA-2026-11-16.md; 12 kandidat dibunuh; storefront diblokir Vercel checkpoint 429 dari VM — fase 2 butuh browser/IP Andy). HUNT WOLT RUNNING (fase unauthenticated, Intigriti max 3.500 euro)."
     }
   ]
 }
