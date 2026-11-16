@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:40:59+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:40 WIB",
+  "updatedAt": "2026-11-16T07:46:47+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:46 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -319,8 +319,8 @@
     },
     {
       "name": "Hunt OVH (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:24 at Andy's 'Gas' (paralel Kiteworks + E-Voting + Lightspark): OVH web + API, fase unauthenticated dulu; Med €300–€1.500 / High €1.000–€1.500 / Crit €12.500, cost 4 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:46, NO-FIND fase unauthenticated (log hunt-log-OVH-2026-11-16.md, 20.854 bytes, §0–§5, Kendall verified file + §0–§2): STEP 0 live ACTIVE, cost 4 credits; scope api.ovh.com (HIGH) + www.ovh.com (HIGH) + *.soyoustart.com (LOW); Med 300 euro / High 1.000 euro / Crit 12.500 euro; 1.829 laporan total. CATATAN SCOPE: www.ovh.com me-redirect ke www.ovhcloud.com dan /manager/ ke manager.eu.ovhcloud.com — keduanya DI LUAR scope, tidak diprobe. Dedup bersih (insiden besar: supply-chain OVHcloud CLI 19 Okt 2026 GHSA-862f-55f5-vmvw — sudah didisclose + diperbaiki). Metode: GET /1.0/<section>.json kembalikan skema Swagger 1.2 lengkap tanpa auth — 70 skema, 6.369 operasi, 443 noAuthentication:true (271 GET, 167 POST, 2 PUT, 3 DELETE); 5.926 operasi ber-auth 401 tanpa kredensial (kontrol GET /me 401). 26 kandidat diperiksa, 20 dibunuh dengan bukti live (XSS orderId di-encode, IDOR guest cart UUIDv4 122-bit tidak bisa dienumerasi, invoice billId shell generik, open redirect tetap ke ovhcloud.com, CORS ACAO * tanpa credentials, eligibilityReference 64 karakter, dll); PoC 11/11 PASS. Lead fase 2 (butuh akun/aksi Andy): L-1 POST /secret/retrieve (TERKUAT — format/entropy secret ID tidak diketahui; bila pendek/tebak, secret berisi password via email bisa diambil orang lain), L-2 POST /me/passwordRecover binding token, L-3 visibilityCheckResult, L-4 POST /auth/credential (butuh aplikasi API Andy), L-5 POST /newAccount, L-6 HMAC-SHA1 OVH mengikat query string? (butuh kredensial aplikasi Andy)."
     },
     {
       "name": "Hunt TeamViewer (YesWeHack)",
@@ -341,6 +341,11 @@
       "name": "Hunt DANA (YesWeHack)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:40 at Andy's 'Gas' (ganti TeamViewer yang NO-FIND): web + API, target Indonesia, fase unauthenticated dulu; Med 700 euro / Crit 3.000 euro; cost credits verifikasi live di STEP 0; fase penuh mungkin butuh nomor HP Indonesia di fase 2 — fase ini read-only; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+    },
+    {
+      "name": "Hunt Meta OSS llama3 + llama-stack-ops",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:46 at Andy's 'Gas' (ganti OVH yang NO-FIND): repo meta-llama/llama3 + llama-stack-ops — dua repo Meta yang benar-benar BELUM diaudit (8 repo lain sudah diaudit di hunt #2/#3, jangan ulang); target High–Critical (pattern OSS Meta sejauh ini Low — bila hanya Low, catat, jangan draft filing tanpa keputusan Kendall); filing butuh 'Ya kirim' Andy per laporan."
     }
   ]
 }
