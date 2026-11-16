@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:05:39+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:05 WIB",
+  "updatedAt": "2026-11-16T07:09:29+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:09 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -284,13 +284,18 @@
     },
     {
       "name": "Hunt Adobe (Intigriti)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~05:47 at Andy's 'lanjut semua' (paralel dengan NVIDIA): web scope, fase unauthenticated dulu; Med $300-$1.500 / High $1.500-$7.500 / Crit $7.500-$10.000; STEP 0 live + enumerasi scope di awal hunt."
+      "status": "done",
+      "note": "DONE 16 Nov ~06:37: NO-FIND fase 1 unauthenticated (log hunt-log-ADOBE-2026-11-16.md). STEP 0 live: ACTIVE, FREE, tanpa rep gate, tanpa KYC row. ~50 probe GET-only ke 14 host: 9 kandidat dibunuh (K-01 IMS redirect_uri bypass — server ganti redirect_uri ke yang terdaftar; K-02/03 IMS auth ditegakkan 401/400; K-04 Firefly API 404; K-05 cc-api 403/timeout WAF; K-06 Express SPA fallback; K-07 XSS 0 refleksi; K-08 host header tidak bisa diuji dari VM; K-09 login-gated). Scope aset TIDAK ada di preview publik (0 domain Adobe di HTML 341 KB) — perlu halaman login. Lead fase 2 (butuh akun Adobe gratis): L-1 IDOR lintas-tenant, L-2 IMS session/PKCE, L-3 share-link IDOR, L-4 Behance/Stock API — perlu keputusan Andy. Catatan: program syaratkan 2FA akun researcher (Andy skip 2FA) — konfirmasi sebelum submit."
     },
     {
       "name": "Hunt Kiteworks (YesWeHack)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:05 at Andy's 'lanjut semua': web + API (test env + API Playground), fase unauthenticated dulu; Med €2.500-€3.000 / High €8.000-€10.000 / Crit €50.000, cost 5 credits; filing butuh KYC Andy (belum dilakukan)."
+    },
+    {
+      "name": "Hunt YWH platform (YesWeHack)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:09 at Andy's 'lanjut semua' (ganti Adobe yang NO-FIND): platform YesWeHack sendiri — web + API publik, fase unauthenticated dulu; Med €1.500 / High €5.000 / Crit €15.000, cost HANYA 1 credit; filing butuh KYC Andy (belum dilakukan)."
     }
   ]
 }
