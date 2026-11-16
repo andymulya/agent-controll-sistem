@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:24:43+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:24 WIB",
+  "updatedAt": "2026-11-16T07:27:07+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:27 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -289,8 +289,8 @@
     },
     {
       "name": "Hunt Kiteworks (YesWeHack)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:05 at Andy's 'lanjut semua': web + API (test env + API Playground), fase unauthenticated dulu; Med €2.500-€3.000 / High €8.000-€10.000 / Crit €50.000, cost 5 credits; filing butuh KYC Andy (belum dilakukan)."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:17: NO-FIND fase 1 unauthenticated (log hunt-log-KITEWORKS-2026-11-16.md, Kendall verified file + §0–§6). STEP 0 live: ACTIVE, cost 5 credits, 308 laporan. 14 kandidat dibunuh (permukaan unauthenticated hanya 2 GET benign + login flow + help docs). Crown Jewel Heist = bonus +$25.000 di atas grid HIGH untuk unauth RCE (PR:N) as root di appliance Core (root di satu container TIDAK qualify; Crit €50.000) — tidak ada entry point pre-auth. MFT = Apache Airflow (target fase authenticated: identifikasi versi + audit auth-bypass/RCE). Self-registration ADA di ywh-kw-public.bounty.kiteworks.dev/register (alias YWH / andymulya13@gmail.com). Dedup: 100 advisories (12 Crit / 46 High / 35 Med / 7 Low, 99 ber-CVE, semua 2026-09-30) sudah dilaporkan di program ini — versi test env TIDAK BISA ditentukan tanpa auth (bila env < 9.5.1, sebagian advisories bisa live). Fase 2 (authenticated A-01–A-10: reset-token binding 9.8 → stored XSS→ATO 9.3 → SSRF → BOLA/IDOR → EPG/MFT/SDF + Airflow → API Playground BOLA → OAuth → OTP → referral → Crown Jewel chain) butuh akun test-env Andy + akun kedua (keputusan Andy). KONFLIK KREDIT: saldo 10 — 1 laporan Kiteworks (5) + E-Voting (10) tidak bisa dua-duanya."
     },
     {
       "name": "Hunt YWH platform (YesWeHack)",
@@ -321,6 +321,11 @@
       "name": "Hunt OVH (YesWeHack)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:24 at Andy's 'Gas' (paralel Kiteworks + E-Voting + Lightspark): OVH web + API, fase unauthenticated dulu; Med €300–€1.500 / High €1.000–€1.500 / Crit €12.500, cost 4 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+    },
+    {
+      "name": "Hunt TeamViewer (YesWeHack)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:26 at Andy's 'Gas' (ganti Kiteworks yang NO-FIND fase 1): web + binary downloadable, fase unauthenticated dulu; Med €500–€1.000 / High €2.000–€4.000 / Crit €5.000–€10.000, cost 5 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
     }
   ]
 }
