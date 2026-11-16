@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T08:22:35+07:00",
-  "updatedAtLabel": "16 Nov 2026, 08:22 WIB",
+  "updatedAt": "2026-11-16T08:46:04+07:00",
+  "updatedAtLabel": "16 Nov 2026, 08:46 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -361,6 +361,13 @@
       "name": "Discovery Intigriti",
       "status": "done",
       "note": "DONE 16 Nov ~08:15: discovery + STEP 0 selesai (file intigriti-discovery-2026-11-16.md). 24 program publik, 18 VDP tanpa bounty. Top 3 baru: #1 intigriti-self max 13.337 euro (butuh VPN config Andy), #2 Intergamma max 5.500 euro (langsung jalan, tanpa Andy), #3 Wolt max 3.500 euro. Menunggu pilihan Andy."
+    },
+    {
+      "name": "Hunt Doctolib (YesWeHack)",
+      "detail": "YWH discovery #1 (52 program) • STEP 0 ACTIVE, cost 10 credits, Crit s/d €50.000 (Special scenarios) • DONE 16 Nov ~08:50: NO-FIND fase unauthenticated (log hunt-log-YWH-DOCTOLIB-2026-11-16.md, 28 kandidat dibunuh: robots-paths 404, /.env+/.git 403 Cloudflare, CORS tanpa ACAO, no server-side open redirect, /availabilities.json 400 validasi, /online_booking/draft/new.json 410 Gone). Fase 2: guest-access/sync flow butuh test account + booking dokter fake (code 42).",
+      "owner": "Kendall",
+      "startedAt": "16 Nov 2026, 08:33 WIB",
+      "status": "done"
     }
   ]
 }
