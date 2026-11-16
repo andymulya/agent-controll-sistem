@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-16T07:33:49+07:00",
-  "updatedAtLabel": "16 Nov 2026, 07:33 WIB",
+  "updatedAt": "2026-11-16T07:38:06+07:00",
+  "updatedAtLabel": "16 Nov 2026, 07:38 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -314,8 +314,8 @@
     },
     {
       "name": "Hunt Lightspark (Intigriti)",
-      "status": "running",
-      "note": "RUNNING 16 Nov ~07:22 at Andy's 'lanjut semua' (ganti YWH-platform yang NO-FIND): repo buildonspark/spark + 4 web app Tier 1; Med $750 / High $2.000 / Crit $5.000; Tier 2 sandbox $0 JANGAN dihunt; target High–Critical."
+      "status": "done",
+      "note": "DONE 16 Nov ~07:37, NO-FIND (log hunt-log-LIGHTSPARK-2026-11-16.md, 29.172 bytes, §0–§5, Kendall verified file + §0–§2): STEP 0 live ACTIVE, FREE, tanpa rep gate/KYC; repo buildonspark/spark HEAD 467d3893 (3 Nov 2026). 8 kandidat dibunuh (K-01 QueryTokenOutputs abaikan privacy — known issue program, patched; K-02 sibling QueryTokenTransactions — residual TERBESAR: bila deployed fix hanya menutup QueryTokenOutputs, sibling hidup, verifikasi butuh akun tes + wallet privacy-enabled; K-03 idempotency #145; K-04 deposit partial claim #121; K-05 exit/swap edge #154/#146/#132; K-06 decodeInvoice #167/#166 — fix PR #168/#169 belum merged di HEAD tapi filing = duplicate; K-07 tryPayOverSpark fallback address tanpa autentikasi bila invoice tanpa tag n — tim tahu + warn-only sadar; K-08 squatting — sudah di-hardening). Web: 4 app Tier 1 SPA shell, header ketat, api.lightspark.com 404 kosong di semua GET termasuk /graphql — GraphQL butuh POST + auth → fase authenticated. Lead fase authenticated: K-02 residual, GraphQL IDOR/BOLA lintas-tenant (2 akun tes), QueryStaticDepositAddresses privacy knob (bila OFF di prod, static deposit address bocor), K-07 uji payLightningInvoice dengan invoice tanpa tag n. Pertanyaan terbuka: apakah 2FA wajib aktif di akun Intigriti sebelum submit (Andy skip 2FA 05:35; program text tidak menyebutnya)."
     },
     {
       "name": "Hunt OVH (YesWeHack)",
@@ -331,6 +331,11 @@
       "name": "Hunt Infomaniak (YesWeHack)",
       "status": "running",
       "note": "RUNNING 16 Nov ~07:33 at Andy's 'Gas' (ganti E-Voting yang NO-FIND): web + API, 58 scopes, fase unauthenticated dulu; Med €300–€600 / Crit up to €7.000, cost 2 credits; filing butuh KYC Andy (belum dilakukan); target High–Critical."
+    },
+    {
+      "name": "Hunt Tencent (YesWeHack)",
+      "status": "running",
+      "note": "RUNNING 16 Nov ~07:37 at Andy's 'Gas' (ganti Lightspark yang NO-FIND): web + API, fase unauthenticated dulu; Med €50–€100, cost 0 credits — CREDIT-EARNER (laporan valid menambah kredit untuk filing program lain); target High–Critical, Medium valid tetap berharga di sini."
     }
   ]
 }
