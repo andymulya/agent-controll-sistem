@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-24T19:18:08+07:00",
-  "updatedAtLabel": "24 Nov 2026, 19:18 WIB",
+  "updatedAt": "2026-11-24T19:25:38+07:00",
+  "updatedAtLabel": "24 Nov 2026, 19:25 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -9,8 +9,8 @@
   },
   "gateways": {
     "apinex": {
-      "status": "unknown",
-      "models": null
+      "status": "active",
+      "models": 44
     },
     "iamhc": {
       "status": "unknown",
