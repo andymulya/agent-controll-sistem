@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-24T19:25:38+07:00",
-  "updatedAtLabel": "24 Nov 2026, 19:25 WIB",
+  "updatedAt": "2026-11-28T16:09:55+07:00",
+  "updatedAtLabel": "28 Nov 2026, 16:09 WIB",
   "sorceress": {
     "status": "active",
     "credits": 6,
@@ -10,7 +10,7 @@
   "gateways": {
     "apinex": {
       "status": "active",
-      "models": 44
+      "models": 45
     },
     "iamhc": {
       "status": "unknown",
@@ -18,11 +18,11 @@
     },
     "agentrouter": {
       "status": "active",
-      "models": 2
+      "models": 0
     },
     "xingchi": {
       "status": "active",
-      "models": 23
+      "models": 1
     }
   },
   "pollinations": {
